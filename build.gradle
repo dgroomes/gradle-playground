@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_14
+    targetCompatibility = JavaVersion.VERSION_14
+}
+
+/**
+ * Configure the compiler task, run task and test task to enable Java 14 language "Preview Features"
+ */
+tasks.withType(JavaCompile) {
+    options.compilerArgs += ["--enable-preview"]
+}
+tasks.run {
+    jvmArgs = ["--enable-preview"]
+}
+tasks.test {
+    jvmArgs = ["--enable-preview"]
+}
+
+application {
+    mainClassName = 'dgroomes.App'
+}
+
+test {
+    useJUnitPlatform()
+}
