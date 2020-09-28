@@ -1,12 +1,9 @@
 package dgroomes;
 
 public class App {
-    public MyMessage getGreeting() {
-        return new MyMessage("Hello world.");
-    }
 
     public static void main(String[] args) {
-        var greeting = new App().getGreeting();
+        var greeting = new MyMessage("Hello world!");
         System.out.println(greeting);
     }
 }
