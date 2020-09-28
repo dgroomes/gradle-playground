@@ -31,3 +31,9 @@ A working example of a Gradle project configured to support the latest version o
 Groovy DSL.
 
 See [java-preview-features/README.md](java-preview-features/README.md).
+
+## WishList
+
+General clean-ups, TODOs and things I wish to implement for this project:
+
+* Implement a `java-preview-features-kotlin-dsl` sub-project. (Pretty much copy <https://github.com/dgroomes/wiremock-playground/blob/db2684af8617995106e7793ea1348e1d6516bc70/build.gradle.kts>)   
