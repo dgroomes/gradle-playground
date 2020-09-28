@@ -6,7 +6,7 @@ Learning and exploring Gradle (the #1/#2 most popular Java build tool).
 > deliver better software, faster.
 > -- <cite>https://gradle.org</cite>
 
----
+## Why is this useful?
 
 Gradle can be complex to configure correctly because it is a powerful DSL with a rich set of features and plugins. It's
 hard to remember the exact incantations to write in a `build.gradle` (or `build.gradle.kts` for that matter) to
@@ -25,6 +25,10 @@ sub-project can be run completely on their own. They all have their own copies o
 this is *not* how you would structure a multi-module Gradle project, but I want each sub-project to be a minimal example
 and so I will pay the price of the duplicate Gradle wrappers and `settings.gradle` files.
 
+## Sub-projects
+
+The sub-projects include:
+
 ### `java-preview-features/`
 
 A working example of a Gradle project configured to support the latest version of Java. This project uses Gradle's
@@ -32,8 +36,15 @@ Groovy DSL.
 
 See [java-preview-features/README.md](java-preview-features/README.md).
 
+### `java-preview-features-kotlin-dsl/`
+
+This sub-project is just like the `java-preview-features/` sub-project, but it uses [*Gradle's Kotlin DSL*](https://docs.gradle.org/current/userguide/kotlin_dsl.html).
+
+See [java-preview-features-kotlin-dsl/README.md](java-preview-features-kotlin-dsl/README.md).
+
+
 ## WishList
 
 General clean-ups, TODOs and things I wish to implement for this project:
 
-* Implement a `java-preview-features-kotlin-dsl` sub-project. (Pretty much copy <https://github.com/dgroomes/wiremock-playground/blob/db2684af8617995106e7793ea1348e1d6516bc70/build.gradle.kts>)   
+* DONE Implement a `java-preview-features-kotlin-dsl` sub-project. (Pretty much copy <https://github.com/dgroomes/wiremock-playground/blob/db2684af8617995106e7793ea1348e1d6516bc70/build.gradle.kts>)   

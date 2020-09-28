@@ -18,15 +18,19 @@ java {
 }
 
 /**
- * Configure the compiler task, run task and test task to enable Java language "Preview Features"
+ * Configure the compiler task, test task, start script creation task, and the run task to enable Java language "Preview
+ * Features"
  */
 tasks.withType(JavaCompile) {
     options.compilerArgs += ["--enable-preview"]
 }
-tasks.run {
+tasks.test {
     jvmArgs = ["--enable-preview"]
 }
-tasks.test {
+tasks.startScripts {
+    defaultJvmOpts = ["--enable-preview"]
+}
+tasks.run {
     jvmArgs = ["--enable-preview"]
 }
 
