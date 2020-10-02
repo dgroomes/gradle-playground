@@ -44,8 +44,7 @@ See [java-preview-features-kotlin-dsl/README.md](java-preview-features-kotlin-ds
 
 ### `using-a-maven-bom/`
 
-NOT YET FULLY IMPLEMENTED
-This sub-project shows how to consume a Maven BOM in a Gradle project.
+This sub-project shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
 
 See [consuming-a-maven-bom](consuming-a-maven-bom/README.md).
 
