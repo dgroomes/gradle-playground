@@ -34,7 +34,7 @@ dependencies {
     /**
      * In this contrived case, we want to override the version of the 'jackson-databind' dependency that is defined in
      * the Maven BOM. Instead, for whatever reason, we want to downgrade to a lower version of this dependency for
-     * compilation and runtime. We can accomplish that by using the "stricly" rule. Read about this feature at
+     * compilation and runtime. We can accomplish that by using the "strictly" rule. Read about this feature at
      * https://docs.gradle.org/current/userguide/rich_versions.html#sec:strict-version
      */
     implementation("com.fasterxml.jackson.core:jackson-databind") {
