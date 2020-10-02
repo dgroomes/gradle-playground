@@ -42,11 +42,11 @@ This sub-project is just like the `java-preview-features/` sub-project, but it u
 
 See [java-preview-features-kotlin-dsl/README.md](java-preview-features-kotlin-dsl/README.md).
 
-### `using-a-maven-bom/`
+### `consuming-a-maven-bom/`
 
 This sub-project shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
 
-See [consuming-a-maven-bom](consuming-a-maven-bom/README.md).
+See [consuming-a-maven-bom/README.md](consuming-a-maven-bom/README.md).
 
 ## WishList
 
