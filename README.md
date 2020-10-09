@@ -42,6 +42,13 @@ This sub-project is just like the `java-preview-features/` sub-project, but it u
 
 See [java-preview-features-kotlin-dsl/README.md](java-preview-features-kotlin-dsl/README.md).
 
+### `java-early-access/`
+
+This sub-project illustrates how to use early access versions of Java in a Gradle project by leveraging Gradle's forking
+and "executable" configuration options.
+
+See [java-early-access/README.md](java-early-access/README.md).
+
 ### `consuming-a-maven-bom/`
 
 This sub-project shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
