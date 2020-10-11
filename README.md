@@ -1,6 +1,6 @@
 # gradle-playground
 
-Learning and exploring Gradle (the #1/#2 most popular Java build tool).
+📚 Learning and exploring the Gradle Build Tool.
 
 > From mobile apps to microservices, from small startups to big enterprises, Gradle helps teams build, automate and
 > deliver better software, faster.
@@ -60,3 +60,6 @@ See [consuming-a-maven-bom/README.md](consuming-a-maven-bom/README.md).
 General clean-ups, TODOs and things I wish to implement for this project:
 
 * DONE Implement a `java-preview-features-kotlin-dsl` sub-project. (Pretty much copy <https://github.com/dgroomes/wiremock-playground/blob/db2684af8617995106e7793ea1348e1d6516bc70/build.gradle.kts>)   
+* Rename `java-preview-features` to `java-preview-features-groovy-dsl` and `java-preview-features-kotlin-dsl` to `java-preview-features`
+  because the Kotlin DSL is now fully usable and featureful in my experience. This was not quite true a year ago but it
+  is really good now! I love the auto-completion.
