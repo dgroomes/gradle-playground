@@ -17,6 +17,13 @@ the `compileJava` task with **a different JDK than the JDK used to execute Gradl
 configured to use alternative JDKs to execute *execution* tasks like `run` and `test` (the `run` task is provided by the
 [application plugin](https://docs.gradle.org/current/userguide/application_plugin.html)).
 
+The official Gradle docs have guidance on [_Targeting a specific Java version_](https://docs.gradle.org/6.6.1/userguide/building_java_projects.html#sec:java_cross_compilation)
+that's different from the version of Java used to run Gradle.
+
+**FUTURE-LOOKING**: In the upcoming release of Gradle 6.7 there is a built-in feature to accommodate this exact
+requirement: [Toolchain support for JVM projects](https://docs.gradle.org/6.7-rc-4/release-notes.html#jvm-toolchains).
+Stay on the lookout for that!     
+
 ### Instructions
 
 1. Use Java 11 or 15
