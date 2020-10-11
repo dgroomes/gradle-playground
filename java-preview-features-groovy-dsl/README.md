@@ -1,9 +1,9 @@
-# java-preview-features
+# java-preview-features-groovy-dsl
 
 This project shows how to configure Gradle to build and run a project that uses Java [_Preview Features_](https://openjdk.java.net/jeps/12).
 
-This project uses Gradle's [*Kotlin DSL*](https://docs.gradle.org/current/userguide/kotlin_dsl.html). For comparison
-with the Gradle Groovy DSL, see the sibling project `java-preview-features-groovy-dsl/`.
+This project uses Gradle's original [*Groovy DSL*](https://docs.gradle.org/current/dsl/index.html). For comparison with
+the Gradle Kotlin DSL, see the sibling project `java-preview-features/`.
 
 ---
 

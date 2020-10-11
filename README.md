@@ -36,16 +36,16 @@ The sub-projects include:
 
 ### `java-preview-features/`
 
-A working example of a Gradle project configured to support the latest version of Java. This project uses Gradle's
-Groovy DSL.
+This sub-project shows how to configure Gradle to build and run a project that uses Java [_Preview Features_](https://openjdk.java.net/jeps/12).
 
 See [java-preview-features/README.md](java-preview-features/README.md).
 
-### `java-preview-features-kotlin-dsl/`
+### `java-preview-features-groovy-dsl/`
 
-This sub-project is just like the `java-preview-features/` sub-project, but it uses [*Gradle's Kotlin DSL*](https://docs.gradle.org/current/userguide/kotlin_dsl.html).
+This sub-project is just like the `java-preview-features/` sub-project but it uses Gradle's original [*Groovy DSL*](https://docs.gradle.org/current/dsl/index.html)
+instead of the modern (and preferred, in my opinion) [*Kotlin DSL*](https://docs.gradle.org/current/userguide/kotlin_dsl.html).
 
-See [java-preview-features-kotlin-dsl/README.md](java-preview-features-kotlin-dsl/README.md).
+See [java-preview-features-groovy-dsl/README.md](java-preview-features-groovy-dsl/README.md).
 
 ### `java-early-access/`
 
@@ -65,6 +65,6 @@ See [consuming-a-maven-bom/README.md](consuming-a-maven-bom/README.md).
 General clean-ups, TODOs and things I wish to implement for this project:
 
 * DONE Implement a `java-preview-features-kotlin-dsl` sub-project. (Pretty much copy <https://github.com/dgroomes/wiremock-playground/blob/db2684af8617995106e7793ea1348e1d6516bc70/build.gradle.kts>)   
-* Rename `java-preview-features` to `java-preview-features-groovy-dsl` and `java-preview-features-kotlin-dsl` to `java-preview-features`
+* DONE `java-preview-features` to `java-preview-features-groovy-dsl` and `java-preview-features-kotlin-dsl` to `java-preview-features`
   because the Kotlin DSL is now fully usable and featureful in my experience. This was not quite true a year ago but it
   is really good now! I love the auto-completion.
