@@ -25,7 +25,12 @@ sub-project can be run completely on their own. They all have their own copies o
 this is *not* how you would structure a multi-module Gradle project, but I want each sub-project to be a minimal example
 and so I will pay the price of the duplicate Gradle wrappers and `settings.gradle` files.
 
-## Sub-projects
+## Standalone sub-projects
+
+This repository illustrates different concepts, patterns and examples via standalone sub-projects. Each sub-project is
+completely independent of the others and do not depend on the root project. This _standalone sub-project constraint_
+forces the sub-projects to be complete and maximizes the reader's chances of successfully running, understanding, and
+re-using the code.
 
 The sub-projects include:
 
