@@ -60,6 +60,12 @@ This sub-project shows how to consume a Maven BOM in a Gradle project and *stric
 
 See [consuming-a-maven-bom/README.md](consuming-a-maven-bom/README.md).
 
+### `multi-module/`
+
+This sub-project illustrates a multi-module Gradle project.
+
+See [multi-module/README.md](multi-module/README.md).
+
 ## WishList
 
 General clean-ups, TODOs and things I wish to implement for this project:
@@ -68,4 +74,4 @@ General clean-ups, TODOs and things I wish to implement for this project:
 * DONE `java-preview-features` to `java-preview-features-groovy-dsl` and `java-preview-features-kotlin-dsl` to `java-preview-features`
   because the Kotlin DSL is now fully usable and featureful in my experience. This was not quite true a year ago but it
   is really good now! I love the auto-completion.
-* Add a multi-module Gradle project example. Similar to the one defined at <https://github.com/dgroomes/kafka-playground/blob/557243bea2960a18e5b11da04f2cec46989576ee/build.gradle.kts#L10> 
+* DONE Add a multi-module Gradle project example. Similar to the one defined at <https://github.com/dgroomes/kafka-playground/blob/557243bea2960a18e5b11da04f2cec46989576ee/build.gradle.kts#L10> 
