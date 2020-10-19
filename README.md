@@ -54,16 +54,6 @@ to use an early-access version of Java in a Gradle project.
 
 See [java-toolchain/README.md](java-toolchain/README.md).
 
-### `java-early-access/`
-
-OBSOLETE: this example is obsoleted since the release of Gradle 6.7 which introduced [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html).
-See the `java-toolchain/` sub-project for more information. 
-
-This sub-project illustrates how to use early access versions of Java in a Gradle project by leveraging Gradle's forking
-and "executable" configuration options.
-
-See [java-early-access/README.md](java-early-access/README.md).
-
 ### `consuming-a-maven-bom/`
 
 This sub-project shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.

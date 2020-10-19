@@ -24,7 +24,6 @@ rootProject.name = "gradle-playground"
 // You get code completion and project navigation out-of-the-box. Pretty slick!
 includeBuild("java-preview-features")
 includeBuild("java-preview-features-groovy-dsl")
-includeBuild("java-early-access")
 includeBuild("java-toolchain")
 includeBuild("consuming-a-maven-bom")
 includeBuild("multi-module")
