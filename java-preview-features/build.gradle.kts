@@ -42,5 +42,5 @@ tasks {
 }
 
 application {
-    mainClassName = "dgroomes.App"
+    mainClass.set("dgroomes.App")
 }
