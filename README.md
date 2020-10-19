@@ -18,13 +18,6 @@ accurate [official Gradle documentation](https://docs.gradle.org/current/usergui
 this repository contains my own personal examples that I need to refer back to continuously in my day-to-day development.
 In other words, this repository whittles down the full scale of Gradle to a few files for my own quick reference.
 
-This repository illustrates different concepts, patterns and examples of Gradle via standalone sub-projects. The root of
-the project is also a Gradle project just to appease Intellij. Intellij has a hard if it can't pigeonhole a project into
-a pre-defined box (e.g. Gradle, Maven). So, I made the root project its own Gradle project. Despite this, each
-sub-project can be run completely on their own. They all have their own copies of the Gradle wrapper even! Normally,
-this is *not* how you would structure a multi-module Gradle project, but I want each sub-project to be a minimal example
-and so I will pay the price of the duplicate Gradle wrappers and `settings.gradle` files.
-
 ## Standalone sub-projects
 
 This repository illustrates different concepts, patterns and examples via standalone sub-projects. Each sub-project is
