@@ -1,10 +1,7 @@
-# java-early-access
+# java-toolchain
 
-OBSOLETE: this example is obsoleted since the release of Gradle 6.7 which introduced [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html).
-See the `java-toolchain/` sub-project for more information.
-
-This sub-project illustrates how to use early access versions of Java in a Gradle project by leveraging Gradle's forking
-and "executable" configuration options.
+This sub-project illustrates how to leverage Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html)
+to use an early-access version of Java in a Gradle project.
 
 ---
 
@@ -20,13 +17,14 @@ the `compileJava` task with **a different JDK than the JDK used to execute Gradl
 configured to use alternative JDKs to execute *execution* tasks like `run` and `test` (the `run` task is provided by the
 [application plugin](https://docs.gradle.org/current/userguide/application_plugin.html)).
 
-The official Gradle docs have guidance on [_Targeting a specific Java version_](https://docs.gradle.org/6.6.1/userguide/building_java_projects.html#sec:java_cross_compilation)
-that's different from the version of Java used to run Gradle.
+The official Gradle solution to this problem is to use Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html).
 
 ### Instructions
 
 1. Use Java 11 or 15
-1. Set the environment variable `JAVA_16_HOME` to the path of a JDK 16 installation on your computer
+1. Make sure that Java 16 is installed in a location known to Gradle
+  * Gradle can [auto-detect installations of Java and the JDK](https://docs.gradle.org/current/userguide/toolchains.html#sec:auto_detection)
+  * Alternatively, you can [specify a custom location](https://docs.gradle.org/current/userguide/toolchains.html#sec:custom_loc)  
 1. Run the program with `./gradlew run`
 1. Run the tests with `./gradlew test`
 
