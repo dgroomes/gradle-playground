@@ -75,3 +75,4 @@ General clean-ups, TODOs and things I wish to implement for this project:
   is really good now! I love the auto-completion.
 * DONE Add a multi-module Gradle project example. Similar to the one defined at <https://github.com/dgroomes/kafka-playground/blob/557243bea2960a18e5b11da04f2cec46989576ee/build.gradle.kts#L10> 
 * DONE Add a sub-project that showcases `buildSrc/`
+* IN PROGRESS De-scope jshell stuff and migrate it to <https://github.com/dgroomes/jshell-playground>

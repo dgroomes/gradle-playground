@@ -19,7 +19,7 @@ versions of dependencies. For example:
 ./gradlew dependencyInsight --dependency jackson-databind
 ```  
 
-### Referenced Materials
+## Referenced material
 
 * Gradle docs: [_Importing Maven BOMs_](https://docs.gradle.org/current/userguide/platforms.html#sub:bom_import)
 * Gradle docs: [_Declaring Rich Versions_](https://docs.gradle.org/current/userguide/rich_versions.html#sec:strict-version)
