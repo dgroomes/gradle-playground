@@ -2,20 +2,21 @@
 
 This sub-project showcases [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
 
-Specifically this sub-project defines a custom Gradle task (soon to be custom Gradle *plugin*) to print out the full path
-to each runtime dependency of the project. The format of the printout separates each file by the colon character (':') so
-that the file's contents can be used conveniently as the classpath argument to the `java` command.
+Specifically this sub-project defines a custom Gradle plugin that defines a task to list the full path to each runtime
+dependency of the project.
 
-The availability of this classpath file is a kind of "escape hatch" from Gradle so that we can use hand-written `java`
-commands to execute our program or we can use `jshell` with libraries! This project showcases both.
+The task prints the content to a file and separates each path by the colon character (':') so that the file's contents can
+be used conveniently as the classpath argument to the `java` command. The availability of this classpath file is a kind
+of "escape hatch" from Gradle so that we can use hand-written `java` commands to execute our program or we can use `jshell`
+with libraries! This project showcases both.
 
 ## Instructions
 
 * Use Java 15
 * Compile the program's source code with `./gradlew compileJava`
   * Notice the class files in `build/classes/java/main/`
-* Build the classpath file with `./gradlew printClassPath`
-  * Notice the file `build/runtime-classpath.txt` 
+* Build the classpath file with `./gradlew listDependencies`
+  * Notice the file `build/runtime-dependencies.txt` 
 * Run the program with `./run.sh`. You should see something like this:
     ```
     [main] INFO dgroomes.Main - Hello world from the 'main' method!
@@ -28,10 +29,10 @@ commands to execute our program or we can use `jshell` with libraries! This proj
     ```
 * Altogether, the `jshell` flow looks something like this:
     ```
-    ./gradlew clean printClassPath && ./jshell.sh
+    ./gradlew clean listDependencies && ./jshell.sh
     
-    > Task :printClassPath
-    Wrote runtime classpath to /Users/davidgroomes/repos/personal/gradle-playground/build-source/build/runtime-classpath.txt
+    > Task :listDependencies
+    Wrote runtime classpath to /Users/davidgroomes/repos/personal/gradle-playground/build-source/build/runtime-dependencies.txt
     
     BUILD SUCCESSFUL in 900ms
     2 actionable tasks: 2 executed

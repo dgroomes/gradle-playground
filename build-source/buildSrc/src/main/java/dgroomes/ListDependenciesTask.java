@@ -10,40 +10,43 @@ import java.nio.file.Files;
 import java.util.StringJoiner;
 
 /**
- * We need to print the runtime classpath to a file so that the `run.sh` script can konw the classpath and pass it to jshell.
+ * List the project's runtime dependencies and print them into a file.
  */
-public class PrintClassPath extends DefaultTask {
+public class ListDependenciesTask extends DefaultTask {
+
+    public static final String DEPENDENCIES_OUTPUT_FILE_NAME = "runtime-dependencies.txt";
 
     /**
-     * Print the runtime classpath (given by the Gradle source set named "main") to "build/runtime-classpath.txt"
+     * List the project's runtime dependencies. This is given by the Gradle source set named "main". It is printed to
+     * "build/runtime-dependencies.txt"
      */
     @TaskAction
-    public void printClassPath() throws IOException {
+    public void listDependencies() throws IOException {
         var sourceSets = ((SourceSetContainer) getProject().getExtensions().getByName("sourceSets"));
         var mainSourceSet = sourceSets.getByName("main");
 
-        // Build the classpath
+        // Join the dependencies by the colon character. This format is friendly as an argument to describe a classpath.
         var joiner = new StringJoiner(":");
         for (File file : mainSourceSet.getRuntimeClasspath()) {
             if (file.isFile()) {
                 joiner.add(file.toString());
             }
         }
-        var classpath = joiner.toString();
+        var joined = joiner.toString();
 
         // Create the build directory
         var buildDir = getProject().getBuildDir();
         buildDir.mkdir();
 
-        // Delete the classpath file if it already exists
-        var file = new File(getProject().getBuildDir(), "runtime-classpath.txt");
+        // Delete the dependencies file if it already exists
+        var file = new File(getProject().getBuildDir(), DEPENDENCIES_OUTPUT_FILE_NAME);
         if (file.exists()) {
             file.delete();
         }
         file.createNewFile();
 
         // Write the contents to the file
-        Files.writeString(file.toPath(), classpath);
-        getLogger().quiet("Wrote runtime classpath to {}", file);
+        Files.writeString(file.toPath(), joined);
+        getLogger().quiet("Wrote runtime dependencies to '{}'", file);
     }
 }

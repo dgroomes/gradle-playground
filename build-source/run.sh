@@ -4,7 +4,7 @@
 #
 # This script depends on two things:
 #   1) The program must first be compiled with `./gradlew compileJava`
-#   2) The runtime dependencies must be printed out with `./gradlew printClassPath`
+#   2) The runtime dependencies must be printed out with `./gradlew listDependencies`
 
 set -eu
 
@@ -14,10 +14,10 @@ if [[ ! -d "$programClasses" ]]; then
   exit 1
 fi
 
-classPathFile="build/runtime-classpath.txt"
-if [[ ! -f "$classPathFile" ]]; then
-  echo >&2 "Build the classpath file first. See the README for instructions."
+depsFile="build/runtime-dependencies.txt"
+if [[ ! -f "$depsFile" ]]; then
+  echo >&2 "Build the dependencies file first. See the README for instructions."
   exit 1
 fi
 
-java --class-path "${programClasses}:$(cat "$classPathFile")" dgroomes/Main
+java --class-path "${programClasses}:$(cat "$depsFile")" dgroomes/Main

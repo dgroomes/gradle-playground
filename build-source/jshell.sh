@@ -3,12 +3,12 @@
 
 set -eu
 
-classPathFile="build/runtime-classpath.txt"
-if [[ ! -f "$classPathFile" ]]; then
-  echo >&2 "Build the classpath file first. See the README for instructions."
+depsFile="build/runtime-dependencies.txt"
+if [[ ! -f "$depsFile" ]]; then
+  echo >&2 "Build the dependencies file first. See the README for instructions."
   exit 1
 fi
 
 jshell \
   --feedback verbose \
-  --class-path "$(cat "$classPathFile")"
+  --class-path "$(cat "$depsFile")"
