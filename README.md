@@ -59,11 +59,11 @@ This sub-project illustrates a multi-module Gradle project.
 
 See [multi-module/README.md](multi-module/README.md).
 
-### `build-source/`
+### `plugin/`
 
-This sub-project showcases [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
+This sub-project showcases a custom Gradle plugin and [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
 
-See [build-source/README.md](build-source/README.md).
+See [plugin/README.md](plugin/README.md).
 
 ## WishList
 

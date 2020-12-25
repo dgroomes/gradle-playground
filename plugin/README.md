@@ -1,6 +1,6 @@
-# build-source
+# plugin
 
-This sub-project showcases [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
+This sub-project showcases a custom Gradle plugin and [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
 
 Specifically this sub-project defines a custom Gradle plugin that defines a task to list the full path to each runtime
 dependency of the project.
@@ -32,7 +32,7 @@ with libraries! This project showcases both.
     ./gradlew clean listDependencies && ./jshell.sh
     
     > Task :listDependencies
-    Wrote runtime classpath to /Users/davidgroomes/repos/personal/gradle-playground/build-source/build/runtime-dependencies.txt
+    Wrote runtime classpath to /Users/davidgroomes/repos/personal/gradle-playground/plugin/build/runtime-dependencies.txt
     
     BUILD SUCCESSFUL in 900ms
     2 actionable tasks: 2 executed
