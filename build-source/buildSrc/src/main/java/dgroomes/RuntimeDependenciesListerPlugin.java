@@ -13,6 +13,6 @@ public class RuntimeDependenciesListerPlugin implements Plugin<Project> {
      */
     @Override
     public void apply(Project project) {
-        project.getTasks().register("printClassPath", dgroomes.PrintClassPath.class);
+        project.getTasks().register("printClassPath", PrintClassPath.class);
     }
 }

@@ -54,7 +54,7 @@ General clean-ups, TODOs and things I wish to implement for this project:
 * IN PROGRESS Make the Gradle `buildSrc` content more idiomatic. It should probably be a plugin.
   * DONE make it a plugin
   * Make the task depend on `build` for convenience?
-  * Can we use the "plugins" block to apply the plugin? That would be cool.
+  * DONE Use the "plugins" block to apply the plugin
   * Use the proper file APIs. See [*Working with files in custom tasks and plugins*](https://docs.gradle.org/current/userguide/custom_plugins.html#sec:working_with_files_in_custom_tasks_and_plugins)
 
 ## Referenced material

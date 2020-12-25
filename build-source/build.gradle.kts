@@ -1,8 +1,7 @@
 plugins {
     java
+    id("dgroomes.dependencies-lister")
 }
-
-apply<dgroomes.RuntimeDependenciesListerPlugin>()
 
 repositories {
     mavenLocal()
