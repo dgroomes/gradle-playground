@@ -56,8 +56,12 @@ General clean-ups, TODOs and things I wish to implement for this project:
   * DONE make it a plugin
   * Make the task depend on `build` for convenience?
   * DONE Use the "plugins" block to apply the plugin
-  * Use the proper file APIs. See [*Working with files in custom tasks and plugins*](https://docs.gradle.org/current/userguide/custom_plugins.html#sec:working_with_files_in_custom_tasks_and_plugins)
+  * SKIPPED (there's no config necessary for this plugin so it doesn't make sense) Use the proper file APIs. See [*Working with files in custom tasks and plugins*](https://docs.gradle.org/current/userguide/custom_plugins.html#sec:working_with_files_in_custom_tasks_and_plugins)
+  * DONE Identify tasks inputs and outputs whihc enables Gradle's Incremental Build capability.
 
 ## Referenced material
 
 * [Gradle docs: *Developing Custom Gradle Plugins*](https://docs.gradle.org/current/userguide/custom_plugins.html)
+* [Gradle docs: *Authoring Tasks*](https://docs.gradle.org/current/userguide/more_about_tasks.html)
+  * [*Task outcomes*](https://docs.gradle.org/current/userguide/more_about_tasks.html#sec:task_outcomes)
+  * [*Up-to-date checks (AKA Incremental Builds)*](https://docs.gradle.org/current/userguide/more_about_tasks.html#sec:up_to_date_checks)
