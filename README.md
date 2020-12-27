@@ -31,39 +31,39 @@ The sub-projects include:
 
 This sub-project shows how to configure Gradle to build and run a project that uses Java [_Preview Features_](https://openjdk.java.net/jeps/12).
 
-See [java-preview-features/README.md](java-preview-features/README.md).
+See the README in [java-preview-features/](java-preview-features/).
 
 ### `java-preview-features-groovy-dsl/`
 
 This sub-project is just like the `java-preview-features/` sub-project but it uses Gradle's original [*Groovy DSL*](https://docs.gradle.org/current/dsl/index.html)
 instead of the modern (and preferred, in my opinion) [*Kotlin DSL*](https://docs.gradle.org/current/userguide/kotlin_dsl.html).
 
-See [java-preview-features-groovy-dsl/README.md](java-preview-features-groovy-dsl/README.md).
+See the README in [java-preview-features-groovy-dsl/](java-preview-features-groovy-dsl/).
 
 ### `java-toolchain/`
 
 This sub-project illustrates how to leverage Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html)
 to use an early-access version of Java in a Gradle project.
 
-See [java-toolchain/README.md](java-toolchain/README.md).
+See the README in [java-toolchain/](java-toolchain/).
 
 ### `consuming-a-maven-bom/`
 
 This sub-project shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
 
-See [consuming-a-maven-bom/README.md](consuming-a-maven-bom/README.md).
+See the README in [consuming-a-maven-bom/](consuming-a-maven-bom/).
 
 ### `multi-module/`
 
 This sub-project illustrates a multi-module Gradle project.
 
-See [multi-module/README.md](multi-module/README.md).
+See the README in [multi-module/](multi-module/).
 
 ### `plugin/`
 
 This sub-project showcases a custom Gradle plugin and [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
 
-See [plugin/README.md](plugin/README.md).
+See the README in [plugin/](plugin/).
 
 ## WishList
 
