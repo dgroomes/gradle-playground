@@ -47,7 +47,10 @@ public class ListDependenciesTask extends DefaultTask {
 
     /**
      * List the project's runtime dependencies. This is given by the Gradle source set named "main". It is printed to
-     * "build/runtime-dependencies.txt"
+     * "build/runtime-dependencies.txt".
+     *
+     * NOTE: It is not necessary to create the output file's parent directory because Gradle creates it automatically
+     * before it executes the task thanks to org.gradle.internal.execution.steps.CreateOutputsStep.
      */
     @TaskAction
     public void listDependencies() throws IOException {
@@ -62,14 +65,7 @@ public class ListDependenciesTask extends DefaultTask {
         }
         var joined = joiner.toString();
 
-        // Create the build directory
-        var buildDir = getProject().getBuildDir();
-        buildDir.mkdir();
-
-        // Delete the dependencies file if it already exists
-        // Is there a more formal Gradle mechanism to clean up the old task out (in this case, the "dependencies file")
-        // instead of doing it manually here? I feel like there's a more declarative way to do this based on the elaborate
-        // Increment Build API.
+        // Create the output file "fresh" (i.e. delete it if it already existed from an earlier execution of the task)
         var file = getDependenciesListFile();
         if (file.exists()) {
             file.delete();
