@@ -61,7 +61,7 @@ See the README in [multi-module/](multi-module/).
 
 ### `plugin/`
 
-This sub-project showcases a custom Gradle plugin and [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
+This sub-project shows how to write and apply a custom Gradle plugin. It also showcases [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
 
 See the README in [plugin/](plugin/).
 
@@ -75,4 +75,3 @@ General clean-ups, TODOs and things I wish to implement for this project:
   is really good now! I love the auto-completion.
 * DONE Add a multi-module Gradle project example. Similar to the one defined at <https://github.com/dgroomes/kafka-playground/blob/557243bea2960a18e5b11da04f2cec46989576ee/build.gradle.kts#L10> 
 * DONE Add a sub-project that showcases `buildSrc/`
-* IN PROGRESS De-scope jshell stuff and migrate it to <https://github.com/dgroomes/jshell-playground>
