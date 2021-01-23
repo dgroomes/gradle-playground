@@ -25,7 +25,7 @@ examples where we want to execute a program's source code but not in a tradition
     [main] INFO dgroomes.Main - Hello world from the 'main' method!
     ```
 
-## WishList
+## Wish List
 
 General clean-ups, TODOs and things I wish to implement for this project:
 

@@ -65,7 +65,7 @@ This sub-project shows how to write and apply a custom Gradle plugin. It also sh
 
 See the README in [plugin/](plugin/).
 
-## WishList
+## Wish List
 
 General clean-ups, TODOs and things I wish to implement for this project:
 
