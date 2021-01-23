@@ -3,7 +3,6 @@ plugins {
 }
 
 repositories {
-    mavenLocal()
     jcenter()
 }
 
@@ -13,7 +12,7 @@ val jacksonDatabindVersion = "2.11.1" // let's try to force a downgrade to a spe
 dependencies {
     /**
      * Importing a Maven BOM enables convenience and safety with managing transitive dependencies. In this case, it
-     * let's us omit the versions of Jackson dependency declarations declared later in this 'dependencies' block. That's
+     * lets us omit the versions of Jackson dependency declarations declared later in this 'dependencies' block. That's
      * nice! Also, the versions of Jackson dependencies that it automatically uses are a set of "known to work well
      * together" versions. This is a useful safeguard that should reduce our chances of getting an unwelcome NoClassDefFoundError
      * at runtime.
@@ -33,9 +32,9 @@ dependencies {
 
     /**
      * In this contrived case, we want to override the version of the 'jackson-databind' dependency that is defined in
-     * the Maven BOM. Instead, for whatever reason, we want to downgrade to a lower version of this dependency for
-     * compilation and runtime. We can accomplish that by using the "strictly" rule. Read about this feature at
-     * https://docs.gradle.org/current/userguide/rich_versions.html#sec:strict-version
+     * the Maven BOM. Instead of using this version, for whatever reason, we want to downgrade to a lower version of
+     * this dependency for compilation and runtime. We can accomplish that by using the "strictly" rule. Read about this
+     * feature at https://docs.gradle.org/current/userguide/rich_versions.html#sec:strict-version
      */
     implementation("com.fasterxml.jackson.core:jackson-databind") {
         version {

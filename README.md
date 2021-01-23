@@ -75,6 +75,8 @@ General clean-ups, TODOs and things I wish to implement for this project:
   is really good now! I love the auto-completion.
 * DONE Add a multi-module Gradle project example. Similar to the one defined at <https://github.com/dgroomes/kafka-playground/blob/557243bea2960a18e5b11da04f2cec46989576ee/build.gradle.kts#L10> 
 * DONE Add a sub-project that showcases `buildSrc/`
-* Remove `mavenLocal()`. Great official explanation in the [Gradle docs](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:case-for-maven-local)
+* DONE Remove `mavenLocal()`. Great official explanation in the [Gradle docs](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:case-for-maven-local)
 * DONE Upgrade to Gradle 6.8.1 (when it comes out)
-* Build in GitHub Actions
+* DONE Build in GitHub Actions
+* Can we get both Java 15 and Java 16 in the GitHub Actions build environment? If we could, then we can include the 'java-toolchain/'
+  sub-project to the 'assembleAll' Gradle task.

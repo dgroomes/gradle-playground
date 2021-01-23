@@ -4,7 +4,6 @@ subprojects {
     apply(plugin = "java")
     apply(plugin = "application")
     repositories {
-        mavenLocal()
         jcenter()
     }
 
@@ -19,10 +18,10 @@ subprojects {
 
         UPDATE 2020-05-31 Yes it looks like there is an official word on this topic. The activity of configuring a
         sub-project is defined as "cross-configuring" (https://docs.gradle.org/current/userguide/kotlin_dsl.html#sec:kotlin_cross_project_configuration)
-        The note at that article says "Taking this approach means that you won’t be able to use type-safe accessors for
+        The note in that article says "Taking this approach means that you won’t be able to use type-safe accessors for
         model elements contributed by the plugins. You will instead have to rely on string literals and the standard
-        Gradle APIs." So there you have it: cross-configuring is a significant trade-off that might might make your
-        project's build files more DRY/expressive but limits the abilit of the Gradle Kotlin DSL to bring type-safety to
+        Gradle APIs." So there you have it: cross-configuring is a significant trade-off that might make your
+        project's build files more DRY/expressive but limits the ability of the Gradle Kotlin DSL to bring type-safety to
         those very same build files.
         */
         "implementation"("org.slf4j:slf4j-api:$slf4jVersion")
