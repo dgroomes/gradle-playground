@@ -3,7 +3,7 @@ plugins {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 val jacksonBomVersion = "2.11.2" // releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases

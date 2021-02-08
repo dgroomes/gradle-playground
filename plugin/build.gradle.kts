@@ -4,7 +4,7 @@ plugins {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 val slf4jVersion = "1.7.30" // releases: http://www.slf4j.org/news.html

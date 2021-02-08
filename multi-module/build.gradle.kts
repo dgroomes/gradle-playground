@@ -4,7 +4,7 @@ subprojects {
     apply(plugin = "java")
     apply(plugin = "application")
     repositories {
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
