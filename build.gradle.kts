@@ -14,4 +14,5 @@ tasks.register("assembleAll") {
     dependsOn(gradle.includedBuild("multi-module").task(":module-a:assemble"))
     dependsOn(gradle.includedBuild("multi-module").task(":module-b:assemble"))
     dependsOn(gradle.includedBuild("plugin").task(":assemble"))
+    dependsOn(gradle.includedBuild("java-modules").task(":runner:assemble"))
 }

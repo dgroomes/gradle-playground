@@ -25,6 +25,7 @@ rootProject.name = "gradle-playground"
 includeBuild("java-preview-features")
 includeBuild("java-preview-features-groovy-dsl")
 includeBuild("java-toolchain")
+includeBuild("java-modules")
 includeBuild("consuming-a-maven-bom")
 includeBuild("multi-module")
 includeBuild("plugin")

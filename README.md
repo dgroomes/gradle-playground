@@ -65,6 +65,12 @@ This sub-project shows how to write and apply a custom Gradle plugin. It also sh
 
 See the README in [plugin/](plugin/).
 
+### `java-modules/`
+
+An example Gradle project that uses the Java Platform Module System (JPMS).
+
+See the README in [java-modules/](java-modules/).
+
 ## Wish List
 
 General clean-ups, TODOs and things I wish to implement for this project:
