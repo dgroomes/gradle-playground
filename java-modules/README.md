@@ -33,6 +33,9 @@ General clean-ups, TODOs and things I wish to implement for this project:
 
 * DONE Incorporate Jackson as a dependency to this project because apparently Jackson has [some integrations with JPMS](https://github.com/FasterXML/jackson-databind/blob/a2c8c652a0fc01f95f819b65a159a9449af6c0d2/src/moditect/module-info.java#L2).
   It would be useful to show how to incorporate a Gradle dependency that publishes module info. How does that work?
+* DONE (added slf4j 1.7.x. The 1.8.x and 2.x branches are modularized but are beta) Incorporate a non-modularized
+  dependency to this project. This is an almost universal use-case because so many libraries are not modularized. This
+  requires declaring an "automatic module".
 
 ## Referenced material
 
