@@ -36,6 +36,10 @@ General clean-ups, TODOs and things I wish to implement for this project:
 * DONE (added slf4j 1.7.x. The 1.8.x and 2.x branches are modularized but are beta) Incorporate a non-modularized
   dependency to this project. This is an almost universal use-case because so many libraries are not modularized. This
   requires declaring an "automatic module".
+* Patch the slf4j dependency to be modular. For reference about how to do this, see:
+    * [StackOverflow Q&A: *How to inject module declaration into JAR?*](https://stackoverflow.com/q/47222226) (note: this
+      makes sense for one jar but I couldn't get it to work with multiple jars that have dependency relationships between them, like slf4j)
+    * [Gradle docs: *Building Java Modules with Legacy Libraries Sample*](https://docs.gradle.org/current/samples/sample_java_modules_with_transform.html) (note: this is the ticket!)
 
 ## Referenced material
 
