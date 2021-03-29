@@ -73,7 +73,7 @@ See the README in [java-modules/](java-modules/).
 
 ## Wish List
 
-General clean-ups, TODOs and things I wish to implement for this project:
+General clean-ups, changes and things I wish to implement for this project:
 
 * DONE Implement a `java-preview-features-kotlin-dsl` sub-project. (Pretty much copy <https://github.com/dgroomes/wiremock-playground/blob/db2684af8617995106e7793ea1348e1d6516bc70/build.gradle.kts>)   
 * DONE `java-preview-features` to `java-preview-features-groovy-dsl` and `java-preview-features-kotlin-dsl` to `java-preview-features`
