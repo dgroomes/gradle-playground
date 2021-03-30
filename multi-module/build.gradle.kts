@@ -1,8 +1,10 @@
-val slf4jVersion = "1.7.30" // releases: http://www.slf4j.org/news.html
+val dependencyConstraints = project(":dependency-constraints")
 
-subprojects {
+// Configure all of the sub-projects except for the "dependency-constraints" project
+configure(subprojects.minus(dependencyConstraints)) {
     apply(plugin = "java")
     apply(plugin = "application")
+
     repositories {
         mavenCentral()
     }
@@ -24,7 +26,8 @@ subprojects {
         project's build files more DRY/expressive but limits the ability of the Gradle Kotlin DSL to bring type-safety to
         those very same build files.
         */
-        "implementation"("org.slf4j:slf4j-api:$slf4jVersion")
+        "implementation"(platform(dependencyConstraints))
+        "implementation"("org.slf4j:slf4j-api")
     }
 }
 
@@ -47,6 +50,6 @@ val moduleB = project(":module-b")
  */
 configure(listOf(moduleA, moduleB)) {
     dependencies {
-        "implementation"("org.slf4j:slf4j-simple:$slf4jVersion")
+        "implementation"("org.slf4j:slf4j-simple")
     }
 }
