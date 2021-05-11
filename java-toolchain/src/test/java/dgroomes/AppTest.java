@@ -9,6 +9,6 @@ class AppTest {
     @Test
     void runMain() {
         var message = App.sayHello();
-        assertEquals("Hello World! I am running in Java 16-ea", message);
+        assertEquals("Hello World! I am running in Java 17-ea", message);
     }
 }
