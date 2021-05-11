@@ -5,9 +5,8 @@
 tasks.register("assembleAll") {
     dependsOn(gradle.includedBuild("consuming-a-maven-bom").task(":assemble"))
     dependsOn(gradle.includedBuild("java-preview-features").task(":assemble"))
-    dependsOn(gradle.includedBuild("java-preview-features-groovy-dsl").task(":assemble"))
 
-    // Skip 'java-toolchain' because it requires Java 16 and I don't know how to get multiple Java's installed in the
+    // Skip 'java-toolchain' because it requires Java 17 and I don't know how to get multiple Java's installed in the
     // GitHub Actions build environment.
 //    dependsOn(gradle.includedBuild("java-toolchain").task(":assemble"))
 

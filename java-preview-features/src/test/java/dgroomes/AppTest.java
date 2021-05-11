@@ -2,14 +2,14 @@ package dgroomes;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class AppTest {
 
     @Test
     void message() {
-        var message = new MyMessage("Hello world!");
+        var app = new App();
 
-        assertEquals("Hello world!", message.message());
+        assertNotNull(app.randomCelestialObject());
     }
 }

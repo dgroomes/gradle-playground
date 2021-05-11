@@ -15,7 +15,7 @@ examples where we want to execute a program's source code but not in a tradition
 
 ## Instructions
 
-* Use Java 15
+* Use Java 16
 * Compile the program's source code with `./gradlew compileJava`
   * Notice the class files in `build/classes/java/main/`
 * Build the classpath file with `./gradlew listDependencies`

@@ -6,8 +6,8 @@ to use an early-access version of Java in a Gradle project.
 ---
 
 Gradle itself cannot always run on new versions or work-in-progress versions of Java. These versions of Java are
-sometimes called _Early Access_ versions. For example, in October 2020 the early access version of Java is Java 16 which
-is due out for release next year in March 2021.
+sometimes called _Early Access_ versions. For example, in October 2020 the early access version of Java was Java 16 which
+was not compatible with Gradle 6.x which was the latest version of Gradle available at the time.
 
 > Friendly reminder: use the official OpenJDK site to stay up-to-date on the latest OpenJDK plans, like [Java 16](https://openjdk.java.net/projects/jdk/16/spec/).
 
@@ -21,8 +21,8 @@ The official Gradle solution to this problem is to use Gradle's [Toolchains for 
 
 ### Instructions
 
-1. Use Java 11 or 15
-1. Make sure that Java 16 is installed in a location known to Gradle
+1. Use Java 11 or 16
+1. Make sure that Java 17 is installed in a location known to Gradle
   * Gradle can [auto-detect installations of Java and the JDK](https://docs.gradle.org/current/userguide/toolchains.html#sec:auto_detection)
   * Alternatively, you can [specify a custom location](https://docs.gradle.org/current/userguide/toolchains.html#sec:custom_loc)  
 1. Run the program with `./gradlew run`
