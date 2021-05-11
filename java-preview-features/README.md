@@ -7,28 +7,34 @@ with the Gradle Groovy DSL, see the sibling project `java-preview-features-groov
 
 ---
 
-This repo in particular showcases the new Java 15 _Records_ language feature which is a preview feature hidden behind
+This repo in particular showcases the new Java 16 _Sealed Classes_ language feature which is a preview feature hidden behind
 the `--enable-preview` Java flag.
 
-You will need to use [Intellij IDEA 2020.2 or later to get Java 15 support](https://blog.jetbrains.com/idea/2020/09/java-15-and-intellij-idea/).
+You will need to use [Intellij IDEA 2021.1 or later to get Java 16 support](https://blog.jetbrains.com/idea/2021/03/java-16-and-intellij-idea/).
 
 ### Instructions
 
-* Use Java 15
+* Use Java 16
 * Build and run the application with `./gradlew run`. It should output the following:
     ```
+    ./gradlew run
+    
     > Task :compileJava
-    Note: /Users/davidgroomes/repos/personal/gradle-playground/java-preview-features/src/main/java/dgroomes/MyMessage.java uses preview language features.
+    Note: Some input files use preview language features.
     Note: Recompile with -Xlint:preview for details.
     
     > Task :run
-    MyMessage[message=Hello world!]
+    It's Earth, an instance of Planet. Its atmosphere is: mostly nitrogen.
+    It's Earth, an instance of Planet. Its atmosphere is: mostly nitrogen.
+    It's Mars, an instance of Planet. Its atmosphere is: carbon dioxide
+    It's Earth, an instance of Planet. Its atmosphere is: mostly nitrogen.
+    It's Mars, an instance of Planet. Its atmosphere is: carbon dioxide
     
-    BUILD SUCCESSFUL in 6s
+    BUILD SUCCESSFUL in 1s
     2 actionable tasks: 2 executed
     ```
     Notice the warning:
-      > MyMessage.java uses preview language features.
+      > Note: Some input files use preview language features.
     There is no way to suppress this because Java's preview features are designed to allow breaking changes in future
     releases, so the compile-time reminder is a welcome one.   
   * Run the tests with `./gradlew test`

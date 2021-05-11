@@ -23,7 +23,6 @@ rootProject.name = "gradle-playground"
 // clones this repo and opens it in Intellij, all the sub-projects are automatically identified by Intellij and indexed.
 // You get code completion and project navigation out-of-the-box. Pretty slick!
 includeBuild("java-preview-features")
-includeBuild("java-preview-features-groovy-dsl")
 includeBuild("java-toolchain")
 includeBuild("java-modules")
 includeBuild("consuming-a-maven-bom")

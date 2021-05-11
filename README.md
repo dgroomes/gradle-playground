@@ -33,13 +33,6 @@ This sub-project shows how to configure Gradle to build and run a project that u
 
 See the README in [java-preview-features/](java-preview-features/).
 
-### `java-preview-features-groovy-dsl/`
-
-This sub-project is just like the `java-preview-features/` sub-project but it uses Gradle's original [*Groovy DSL*](https://docs.gradle.org/current/dsl/index.html)
-instead of the modern (and preferred, in my opinion) [*Kotlin DSL*](https://docs.gradle.org/current/userguide/kotlin_dsl.html).
-
-See the README in [java-preview-features-groovy-dsl/](java-preview-features-groovy-dsl/).
-
 ### `java-toolchain/`
 
 This sub-project illustrates how to leverage Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html)
