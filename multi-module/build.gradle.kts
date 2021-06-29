@@ -37,8 +37,8 @@ configure(subprojects.minus(dependencyConstraints)) {
  * sub-project would be defined in its own `build.gradle.kts` file, but this is an available option!
  */
 val moduleA = project(":module-a") {
-    configure<ApplicationPluginConvention> {
-        mainClassName = "dgroomes.MainA"
+    configure<JavaApplication> {
+        mainClass.set("dgroomes.MainA")
     }
 }
 

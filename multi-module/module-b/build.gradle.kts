@@ -1,3 +1,3 @@
-configure<ApplicationPluginConvention> {
-    mainClassName = "dgroomes.MainB"
+application {
+    mainClass.set("dgroomes.MainB")
 }

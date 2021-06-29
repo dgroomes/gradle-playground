@@ -79,3 +79,6 @@ General clean-ups, changes and things I wish to implement for this project:
 * DONE Build in GitHub Actions
 * Can we get both Java 15 and Java 16 in the GitHub Actions build environment? If we could, then we can include the 'java-toolchain/'
   sub-project to the 'assembleAll' Gradle task.
+* Incorporate Gradle's [test fixtures](https://docs.gradle.org/current/userguide/java_testing.html#sec:java_test_fixtures)
+  feature in one of the sub-projects
+* Incorporate Gradle's ["convention plugins"](https://docs.gradle.org/current/samples/sample_convention_plugins.html)
