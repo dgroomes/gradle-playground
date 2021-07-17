@@ -15,7 +15,11 @@ examples where we want to execute a program's source code but not in a tradition
 
 ## Instructions
 
-* Use Java 16
+* Use Java 11
+  * This is the version that Gradle is executed with. Gradle often does not work with the very latest version of Java.
+    It's a sure bet that Java 11 will.
+* Have Java 16 installed
+  * This is the version that the project is compiled and run with. 
 * Compile the program's source code with `./gradlew compileJava`
   * Notice the class files in `build/classes/java/main/`
 * Build the classpath file with `./gradlew listDependencies`
