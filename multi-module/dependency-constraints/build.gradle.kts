@@ -7,7 +7,7 @@ plugins {
     `java-platform`
 }
 
-val slf4jVersion = "1.7.30" // releases: http://www.slf4j.org/news.html
+val slf4jVersion = "1.7.32" // releases: http://www.slf4j.org/news.html
 
 dependencies {
     constraints {
