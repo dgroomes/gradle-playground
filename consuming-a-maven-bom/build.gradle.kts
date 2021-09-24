@@ -6,8 +6,8 @@ repositories {
     mavenCentral()
 }
 
-val jacksonBomVersion = "2.11.2" // releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases
-val jacksonDatabindVersion = "2.11.1" // let's try to force a downgrade to a specific version of jackson-databind which is different from what is defined in the BOM
+val jacksonBomVersion = "2.12.5" // releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases
+val jacksonDatabindVersion = "2.12.4" // let's try to force a downgrade to a specific version of jackson-databind which is different from what is defined in the BOM
 
 dependencies {
     /**
@@ -53,24 +53,29 @@ dependencies {
         ------------------------------------------------------------
 
         compileClasspath - Compile classpath for source set 'main'.
-        +--- com.fasterxml.jackson:jackson-bom:2.11.2
-        |    +--- com.fasterxml.jackson.core:jackson-annotations:2.11.2 (c)
-        |    +--- com.fasterxml.jackson.core:jackson-core:2.11.2 (c)
-        |    +--- com.fasterxml.jackson.core:jackson-databind:2.11.2 -> 2.11.1 (c)
-        |    +--- com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.11.2 (c)
-        |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.11.2 (c)
-        +--- com.fasterxml.jackson.core:jackson-annotations -> 2.11.2
-        +--- com.fasterxml.jackson.core:jackson-core -> 2.11.2
-        +--- com.fasterxml.jackson.module:jackson-module-parameter-names -> 2.11.2
-        |    +--- com.fasterxml.jackson.core:jackson-core:2.11.2
-        |    \--- com.fasterxml.jackson.core:jackson-databind:2.11.2 -> 2.11.1
-        |         +--- com.fasterxml.jackson.core:jackson-annotations:2.11.1 -> 2.11.2
-        |         \--- com.fasterxml.jackson.core:jackson-core:2.11.1 -> 2.11.2
-        +--- com.fasterxml.jackson.dataformat:jackson-dataformat-csv -> 2.11.2
-        |    +--- com.fasterxml.jackson.core:jackson-databind:2.11.2 -> 2.11.1 (*)
-        |    +--- com.fasterxml.jackson.core:jackson-annotations:2.11.2
-        |    \--- com.fasterxml.jackson.core:jackson-core:2.11.2
-        \--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.11.1} -> 2.11.1 (*)
+        +--- com.fasterxml.jackson:jackson-bom:2.12.5
+        |    +--- com.fasterxml.jackson.core:jackson-annotations:2.12.5 (c)
+        |    +--- com.fasterxml.jackson.core:jackson-core:2.12.5 (c)
+        |    +--- com.fasterxml.jackson.core:jackson-databind:2.12.5 -> 2.12.4 (c)
+        |    +--- com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.12.5 (c)
+        |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.12.5 (c)
+        +--- com.fasterxml.jackson.core:jackson-annotations -> 2.12.5
+        |    \--- com.fasterxml.jackson:jackson-bom:2.12.5 (*)
+        +--- com.fasterxml.jackson.core:jackson-core -> 2.12.5
+        |    \--- com.fasterxml.jackson:jackson-bom:2.12.5 (*)
+        +--- com.fasterxml.jackson.module:jackson-module-parameter-names -> 2.12.5
+        |    +--- com.fasterxml.jackson.core:jackson-core:2.12.5 (*)
+        |    +--- com.fasterxml.jackson.core:jackson-databind:2.12.5 -> 2.12.4
+        |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.12.4 -> 2.12.5 (*)
+        |    |    +--- com.fasterxml.jackson.core:jackson-core:2.12.4 -> 2.12.5 (*)
+        |    |    \--- com.fasterxml.jackson:jackson-bom:2.12.4 -> 2.12.5 (*)
+        |    \--- com.fasterxml.jackson:jackson-bom:2.12.5 (*)
+        +--- com.fasterxml.jackson.dataformat:jackson-dataformat-csv -> 2.12.5
+        |    +--- com.fasterxml.jackson.core:jackson-databind:2.12.5 -> 2.12.4 (*)
+        |    +--- com.fasterxml.jackson.core:jackson-annotations:2.12.5 (*)
+        |    +--- com.fasterxml.jackson.core:jackson-core:2.12.5 (*)
+        |    \--- com.fasterxml.jackson:jackson-bom:2.12.5 (*)
+        \--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.12.4} -> 2.12.4 (*)
 
         (c) - dependency constraint
         (*) - dependencies omitted (listed previously)
