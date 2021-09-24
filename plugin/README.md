@@ -15,19 +15,25 @@ examples where we want to execute a program's source code but not in a tradition
 
 ## Instructions
 
-* Use Java 11
-  * This is the version that Gradle is executed with. Gradle often does not work with the very latest version of Java.
-    It's a sure bet that Java 11 will.
-* Have Java 16 installed
-  * This is the version that the project is compiled and run with. 
-* Compile the program's source code with `./gradlew compileJava`
-  * Notice the class files in `build/classes/java/main/`
-* Build the classpath file with `./gradlew listDependencies`
-  * Notice the file `build/runtime-dependencies.txt`. Thanks Gradle!
-* Run the program with `./run.sh`. You should see something like this:
-    ```
-    [main] INFO dgroomes.Main - Hello world from the 'main' method!
-    ```
+1. Use Java 11
+    * This is the version that Gradle is executed with. Gradle often does not work with the very latest version of Java.
+       It's a sure bet that Java 11 will.
+1. Have Java 17 installed
+    * This is the version that the project is compiled and run with.
+    * Java 17 is the latest version of Java. We want to stay modern if we can!
+2. Compile the program's source code:
+    * `./gradlew compileJava`
+    * Notice the class files in `build/classes/java/main/`
+3. Build the classpath reference file:
+    * `./gradlew listDependencies`
+    * Notice the file `build/runtime-dependencies.txt`. Thanks Gradle!
+4. Switch to Java 17
+5. Run the program:
+    * `./run.sh`
+    * You should see something like this: 
+      ```
+      [main] INFO dgroomes.Main - Hello world from the 'main' method!
+      ```
 
 ## Wish List
 
