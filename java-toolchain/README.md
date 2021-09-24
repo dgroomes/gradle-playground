@@ -3,30 +3,46 @@
 This sub-project illustrates how to leverage Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html)
 to use an early-access version of Java in a Gradle project.
 
----
+### What?
 
-Gradle itself cannot always run on new versions or work-in-progress versions of Java. These versions of Java are
-sometimes called _Early Access_ versions. For example, in October 2020 the early access version of Java was Java 16 which
-was not compatible with Gradle 6.x which was the latest version of Gradle available at the time.
+This is a Java 18 _Early Access_ project that's built with Java 11. Wait, what does that mean? This is a bit of a facetious
+statement. There's no trickery here. Remember that Gradle itself is a Java program and we are free to use a different version
+of Java to run Gradle than the version of Java used to compile and run our program. In this project:
 
-> Friendly reminder: use the official OpenJDK site to stay up-to-date on the latest OpenJDK plans, like [Java 16](https://openjdk.java.net/projects/jdk/16/spec/).
+* The Gradle process runs on Java 11
+    * Gradle is our build tool. As such, we can facetiously say "we use Java 11 to build the project".
+* The compilation process runs on Java 18
+    * Specifically, the `./gradlew compileJava` task will kick off a Java 18 `javac` process. Gradle refers to this pattern
+      of creating a secondary Java process as "forking a Java process".
+* The testing process runs on Java 18
+    * Specifically, the `./gradlew test` task will fork a Java 18 process to run the JUnit tests.
+* The run process uses Java 18
+    * Specifically, the `./gradlew run` task will fork a Java 18 process to run the program (The `public static void main(String... args)`
+      method)
+    * The `run` task is provided by the [application plugin](https://docs.gradle.org/current/userguide/application_plugin.html))
 
-Fortunately, Gradle does support compiling Java source for a so-called _Early Access_ version of Java, like Java 16,
-even if Gradle itself cannot run on that version of Java! Gradle can do this because it can _fork_ a process to execute
-the `compileJava` task with **a different JDK than the JDK used to execute Gradle itself**. Similarly, Gradle can be
-configured to use alternative JDKs to execute *execution* tasks like `run` and `test` (the `run` task is provided by the
-[application plugin](https://docs.gradle.org/current/userguide/application_plugin.html)).
+### Why?
 
-The official Gradle solution to this problem is to use Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html).
+Out of convenience and simplicity, its best to use the same version of Java to run Gradle and to compile, test and run your
+program. So, why ever use two different versions? Out of necessity. Gradle itself cannot always run on new versions or
+work-in-progress versions of Java. These versions of Java are called _Early Access_ versions. For example, in October 2020
+the early access version of Java was Java 16 and the latest version of Gradle was Gradle 6.x. Gradle 6.x fails on Java 16.
+So, at the time it was necessary to have a split-version project.
+
+> Friendly reminder: use the official OpenJDK site to stay up-to-date on the latest OpenJDK plans, like [Java 18](https://openjdk.java.net/projects/jdk/18/spec/).
+
+The Gradle mechanic to configure a split-version project is Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html).
 
 ### Instructions
 
-1. Use Java 11 or 16
-1. Make sure that Java 17 is installed in a location known to Gradle
-  * Gradle can [auto-detect installations of Java and the JDK](https://docs.gradle.org/current/userguide/toolchains.html#sec:auto_detection)
-  * Alternatively, you can [specify a custom location](https://docs.gradle.org/current/userguide/toolchains.html#sec:custom_loc)  
-1. Run the program with `./gradlew run`
-1. Run the tests with `./gradlew test`
+1. Use Java 11
+2. Make sure that Java 18 is installed in a location known to Gradle
+    * Gradle can [auto-detect installations of Java and the JDK](https://docs.gradle.org/current/userguide/toolchains.html#sec:auto_detection)
+    * Alternatively, you can [specify a custom location](https://docs.gradle.org/current/userguide/toolchains.html#sec:custom_loc)
+3. Run the program:
+    * `./gradlew run`
+4. Run the tests:
+    * `./gradlew test`
 
 ### Notes
 

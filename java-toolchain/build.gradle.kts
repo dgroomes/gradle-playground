@@ -7,7 +7,7 @@ repositories {
     mavenCentral()
 }
 
-val junitJupiterVersion = "5.7.0" // releases: https://junit.org/junit5/docs/current/release-notes/index.html
+val junitJupiterVersion = "5.8.0" // releases: https://junit.org/junit5/docs/current/release-notes/index.html
 
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
@@ -16,7 +16,7 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(18))
     }
 }
 
