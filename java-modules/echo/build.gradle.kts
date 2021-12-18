@@ -2,7 +2,7 @@ plugins {
     `java-library`
 }
 
-val jacksonVersion = "2.12.5" // releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases
+val jacksonVersion = "2.12.5" // Jackson releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases
 
 java {
     modularity.inferModulePath.set(true)

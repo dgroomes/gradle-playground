@@ -7,7 +7,7 @@ repositories {
     mavenCentral()
 }
 
-val junitJupiterVersion = "5.8.1" // releases: https://junit.org/junit5/docs/current/release-notes/index.html
+val junitJupiterVersion = "5.8.1" // JUnit releases: https://junit.org/junit5/docs/current/release-notes/index.html
 
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
@@ -21,7 +21,7 @@ java {
 }
 
 tasks {
-    withType(Test::class.java) {
+    test {
         useJUnitPlatform()
     }
 }

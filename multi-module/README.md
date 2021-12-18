@@ -4,16 +4,17 @@ This sub-project illustrates a multi-module Gradle project.
 
 ---
 
-Read more about Gradle's support for Multi-project builds at the [official doc site](https://docs.gradle.org/current/userguide/kotlin_dsl.html#sec:multi_project_builds).
+Read more about Gradle's support for multi-project builds at the [official doc site](https://docs.gradle.org/current/userguide/kotlin_dsl.html#sec:multi_project_builds).
 
 ## Instructions
 
-* The interesting part of this project is the Gradle configuration. So, read the `build.gradle.kts` files. But still, it's
-  useful to execute the example applications to prove that it works. Follow the below steps to build and run the applications.
-* Run `module-a`:
-  * `./gradlew :module-a:run`
-* Run `module-b`:
-  * `./gradlew :module-b:run`
+1. The interesting part of this project is the Gradle configuration. So, read the `build.gradle.kts` files. But still, it's
+   useful to execute the example applications to prove that it works. Follow the below steps to build and run the applications.
+2. Use Java 17
+3. Run `module-a`:
+   * `./gradlew :module-a:run`
+4. Run `module-b`:
+   * `./gradlew :module-b:run`
 
 ## Wish List
 
@@ -26,3 +27,7 @@ General clean-ups, changes and things I wish to implement for this project:
   multi-module projects, and I want "common dependency version declaration" implemented in "multi-module/". I think a BOM
   is how to do it because there is some problem (maybe will be fixed in Gradle 7?) about root project dependency declarations
   being applied to sub-projects even if you don't want them (not good).
+* Recently I'm preferring Gradle ["pre-compiled script plugins"](https://github.com/dgroomes/http-client-server-playground/blob/main/buildSrc/src/main/kotlin/common.gradle.kts)
+  –also called convention scripts– instead of the platform feature via the `java-platform` plugin. Maybe the platform
+  feature is best suited when it is published, like the Jackson or JUnit BOMs. But for a given project, I think the
+  bespoke versioning constraints are best done in a conventions script. Replace the platform with a conventions script. 

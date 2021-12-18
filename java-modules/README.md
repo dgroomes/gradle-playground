@@ -16,16 +16,11 @@ There are a few things to highlight about this project vs. a non-JPMS project:
 Tip: disassemble a `module-info.class` file to view its content using `javap`. For example: `javap --module-path . module-info.class`.
 I've found this to be helpful while learning about JPMS.
 
----
-**WARNING**: Gradle's support for JPMS is still incubating as of Gradle 6.8.2 
-
----
-
 ## Instructions
 
-* Use Java 11
-* Build and run the program:
-  * `./gradlew run`
+1. Use Java 17
+2. Build and run the program:
+   * `./gradlew run`
 
 ## Wish List
 
@@ -40,8 +35,10 @@ General clean-ups, TODOs and things I wish to implement for this project:
     * [StackOverflow Q&A: *How to inject module declaration into JAR?*](https://stackoverflow.com/q/47222226) (note: this
       makes sense for one jar but I couldn't get it to work with multiple jars that have dependency relationships between them, like slf4j)
     * [Gradle docs: *Building Java Modules with Legacy Libraries Sample*](https://docs.gradle.org/current/samples/sample_java_modules_with_transform.html) (note: this is the ticket!)
+* Gradle's module support was promoted in Gradle 7.x. Read the [release notes](https://docs.gradle.org/7.0.2/release-notes.html).
+  In particular, the `inferModulePath` call is no longer required. Delete it.
 
-## Referenced material
+## Reference
 
 * [Gradle docs: *Build Java Modules Sample*](https://docs.gradle.org/current/samples/sample_java_modules_multi_project.html)
 * [Gradle docs: *The Application Plugin: Building applications using the Java Module System*](https://docs.gradle.org/current/userguide/application_plugin.html#sec:application_modular)

@@ -6,7 +6,7 @@ repositories {
     mavenCentral()
 }
 
-val jacksonBomVersion = "2.12.5" // releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases
+val jacksonBomVersion = "2.12.5" // Jackson releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases
 val jacksonDatabindVersion = "2.12.4" // let's try to force a downgrade to a specific version of jackson-databind which is different from what is defined in the BOM
 
 dependencies {
