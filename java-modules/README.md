@@ -7,7 +7,6 @@ An example Gradle project that uses the Java Platform Module System (JPMS).
 There are a few things to highlight about this project vs. a non-JPMS project:
 
 * The `module-info.java` files
-* Enabling JPMS support in Gradle with `modularity.inferModulePath.set(true)` in the `java { ... }` configuration block
 * Configuring the Gradle *Application Plugin* to work with modules with `mainModule.set("dgroomes.runner")`
 * When you build a distribution with `./gradlew install`, the shell/start script that is generated (`build/install/runner/bin/runner`)
   by the Gradle *Application Plugin* defines a `MODULE_PATH` variable in addition to the `CLASSPATH` variable that normally
