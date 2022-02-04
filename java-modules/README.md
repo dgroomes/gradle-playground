@@ -36,6 +36,9 @@ General clean-ups, TODOs and things I wish to implement for this project:
     * [Gradle docs: *Building Java Modules with Legacy Libraries Sample*](https://docs.gradle.org/current/samples/sample_java_modules_with_transform.html) (note: this is the ticket!)
 * DONE Gradle's module support was promoted in Gradle 7.x. Read the [release notes](https://docs.gradle.org/7.0.2/release-notes.html).
   In particular, the `inferModulePath` call is no longer required. Delete it.
+* DONE Showcase JPMS's strength when it comes to strongly encapsulating implementation details. For example, can I have
+  classes that are used as implementation details in a package (or maybe sub-package?) and then export just a particular
+  "ordained" package?
 
 ## Reference
 

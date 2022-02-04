@@ -1,8 +1,7 @@
 package dgroomes.echo;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import dgroomes.echo.impl.Util;
 
 public class Echo {
 
@@ -22,14 +21,7 @@ public class Echo {
      * @throws IllegalArgumentException if the JSON is invalid or does not contain a 'message' field
      */
     public static String echoFromJson(String json) {
-        var objectMapper = new ObjectMapper();
-
-        JsonNode node;
-        try {
-            node = objectMapper.readTree(json);
-        } catch (JsonProcessingException e) {
-            throw new IllegalArgumentException(String.format("The given string was not valid JSON! %s", json));
-        }
+        JsonNode node = Util.readTree(json);
 
         var msgNode = node.get("message");
         if (msgNode == null) {
