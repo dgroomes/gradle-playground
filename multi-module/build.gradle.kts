@@ -1,7 +1,6 @@
-val dependencyConstraints = project(":dependency-constraints")
+val versionCatalog = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
-// Configure all of the sub-projects except for the "dependency-constraints" project
-configure(subprojects.minus(dependencyConstraints)) {
+subprojects {
     apply(plugin = "java")
     apply(plugin = "application")
 
@@ -25,9 +24,13 @@ configure(subprojects.minus(dependencyConstraints)) {
         Gradle APIs." So there you have it: cross-configuring is a significant trade-off that might make your
         project's build files more DRY/expressive but limits the ability of the Gradle Kotlin DSL to bring type-safety to
         those very same build files.
+
+        UPDATE 2022-08-28 Continuing the type-unsafe trend... Now I want to use "version catalogs" and the associated
+        TOML file. But when I try to use 'libs.slf4j.api' I'm getting the error: 'Extension with name 'libs' does not exist.'
+        I need to use the version catalog with the type-unsafe API described here https://docs.gradle.org/current/userguide/platforms.html#sub:type-unsafe-access-to-catalog
+        Specifically, I need: extensions.getByType<VersionCatalogsExtension>().named("libs")
         */
-        "implementation"(platform(dependencyConstraints))
-        "implementation"("org.slf4j:slf4j-api")
+        "implementation"(versionCatalog.findLibrary("slf4j-api").get())
     }
 }
 
@@ -50,6 +53,6 @@ val moduleB = project(":module-b")
  */
 configure(listOf(moduleA, moduleB)) {
     dependencies {
-        "implementation"("org.slf4j:slf4j-simple")
+        "implementation"(versionCatalog.findLibrary("slf4j-simple").get())
     }
 }
