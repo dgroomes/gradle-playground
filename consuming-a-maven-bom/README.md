@@ -2,6 +2,7 @@
 
 This sub-project shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
 
+
 # Description
 
 In particular, this project imports the [Jackson project](https://github.com/FasterXML/jackson) BOM dependency: <https://github.com/FasterXML/jackson-bom>.
@@ -9,7 +10,10 @@ This allows Jackson dependencies defined in the BOM to be declared in the Gradle
 the version will be determined by the BOM (pretty cool!). Also, we are able to specifically override versions of any
 dependency defined in the BOM. See the block comments in the `build.gradle.kts` file for details.
 
+
 # Instructions
+
+Follow these instructions to build and run the program:
 
 1. Use Java 17
 2. Read the `build.gradle.kts` file
@@ -17,10 +21,19 @@ dependency defined in the BOM. See the block comments in the `build.gradle.kts` 
 3. Make some dependency observations
    * Use any of the following commands to make observations about the dependencies in the project. These commands will
      describe resolved and overridden dependency versions.
-   * `./gradlew dependencies`
-   * `./gradlew dependencies --configuration compileClasspath`
-   * `./gradlew dependencyInsight --dependency jackson-bom`
-   * `./gradlew dependencyInsight --dependency jackson-databind`
+   * ```shell
+     ./gradlew dependencies
+     ```
+   * ```shell
+     ./gradlew dependencies --configuration compileClasspath
+     ```
+   * ```shell
+     ./gradlew dependencyInsight --dependency jackson-bom
+     ```
+   * ```shell
+     ./gradlew dependencyInsight --dependency jackson-databind
+     ```
+
 
 ## Reference
 
