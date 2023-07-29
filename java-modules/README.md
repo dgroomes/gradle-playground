@@ -3,7 +3,7 @@
 An example Gradle project that uses the Java Platform Module System (JPMS). 
 
 
-## Description
+## Overview
 
 There are a few things to highlight about this project vs. a non-JPMS project:
 
@@ -25,6 +25,14 @@ Follow these instructions to build and run the demo program:
 2. Build and run the program:
    * ```shell
      ./gradlew run
+     ```
+   * It should print something that looks like the following.
+   * ```text
+     > Task :runner:run
+     [main] INFO dgroomes.runner.Main - You say: hello!
+     [main] INFO dgroomes.runner.Main - You heard: hello!, hello!, hello! ...
+     [main] INFO dgroomes.runner.Main - You say: { "message": "hello from JSON!" }
+     [main] INFO dgroomes.runner.Main - You heard: hello from JSON!, hello from JSON!, hello from JSON! ...
      ```
 
 
