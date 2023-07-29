@@ -7,8 +7,6 @@ repositories {
     mavenCentral()
 }
 
-val slf4jVersion = "1.7.32" // releases: http://www.slf4j.org/news.html
-
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
@@ -16,6 +14,6 @@ java {
 }
 
 dependencies {
-    implementation("org.slf4j:slf4j-api:$slf4jVersion")
-    implementation("org.slf4j:slf4j-simple:$slf4jVersion")
+    implementation(libs.slf4j.api)
+    runtimeOnly(libs.slf4j.simple)
 }
