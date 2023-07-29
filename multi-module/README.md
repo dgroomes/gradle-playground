@@ -2,9 +2,11 @@
 
 This subproject illustrates a multi-module Gradle project.
 
----
 
-Read more about Gradle's support for multi-project builds at the [official doc site](https://docs.gradle.org/current/userguide/kotlin_dsl.html#sec:multi_project_builds).
+## Overview
+
+This project is me learning how to configure multi-module Gradle projects. Read more about Gradle's support for
+multi-project builds at the [official doc site](https://docs.gradle.org/current/userguide/kotlin_dsl.html#sec:multi_project_builds).
 
 
 ## Instructions
@@ -17,9 +19,19 @@ useful to execute the example applications to prove that it works. Follow the be
    * ```shell
      ./gradlew :module-a:run
      ```
+   * It should print something like the following.
+   * ```text
+     > Task :module-a:run
+     [main] INFO dgroomes.MainA - Hello world from 'module-a'!
+     ```
 3. Run `module-b`:
    * ```shell
      ./gradlew :module-b:run
+     ```
+   * It should print something like the following.
+   * ```text
+     > Task :module-b:run
+     [main] INFO dgroomes.MainB - Hello world from 'module-b'!
      ```
 
 

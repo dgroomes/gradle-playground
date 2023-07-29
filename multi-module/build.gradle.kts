@@ -53,6 +53,6 @@ val moduleB = project(":module-b")
  */
 configure(listOf(moduleA, moduleB)) {
     dependencies {
-        "implementation"(versionCatalog.findLibrary("slf4j-simple").get())
+        "runtimeOnly"(versionCatalog.findLibrary("slf4j-simple").get())
     }
 }
