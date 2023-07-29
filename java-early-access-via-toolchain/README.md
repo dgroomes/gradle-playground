@@ -1,4 +1,4 @@
-# java-toolchain
+# java-early-access-via-toolchain
 
 This subproject illustrates how to leverage Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html)
 to use an early-access version of Java in a Gradle project.
@@ -69,7 +69,9 @@ features. For a working example of how to configure Gradle to enable Java langua
 
 General clean-ups, TODOs and things I wish to implement for this project:
 
-* [ ] Rename this to "java-early-access". I am generally favoring using toolchains everywhere now. So having a standalone
+* [x] DONE (UPDATE: I still like "toolchain" in the title. Let's make it long: "java-early-access-via-toolchain") Rename this to "java-early-access". I am generally favoring using toolchains everywhere now. So having a standalone
   example project dedicated to toolchains is a bit redundant. This project is actually a great example of just "How do I
   set up a Gradle project to work on an early access version of Java?". I think `java-early-access` is a better way to
-  position this project than `java-toolchain`.
+  position this project than `java-toolchain` because it describes a concrete use-case for differing between the Java
+  version used for running Gradle vs the Java version used for compiling and running the program.
+* [ ] Use a TOML Gradle version catalog

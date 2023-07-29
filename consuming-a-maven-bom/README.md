@@ -35,6 +35,14 @@ Follow these instructions to build and run the program:
      ```
 
 
+## Wish List
+
+General clean-ups, changes and things I wish to implement for this project:
+
+* [ ] Consider using dependency locking as way to more concretely show what versions are being used. See the
+  [Gradle docs on dependency locking](https://docs.gradle.org/current/userguide/dependency_locking.html).
+
+
 ## Reference
 
 * Gradle docs: [_Importing Maven BOMs_](https://docs.gradle.org/current/userguide/platforms.html#sub:bom_import)

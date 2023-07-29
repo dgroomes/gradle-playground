@@ -35,12 +35,12 @@ This subproject shows how to configure Gradle to build and run a project that us
 
 See the README in [java-preview-features/](java-preview-features/).
 
-### `java-toolchain/`
+### `java-early-access-via-toolchain/`
 
 This subproject illustrates how to leverage Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html)
 to use an early-access version of Java in a Gradle project.
 
-See the README in [java-toolchain/](java-toolchain/).
+See the README in [java-early-access-via-toolchain/](java-early-access-via-toolchain/).
 
 ### `consuming-a-maven-bom/`
 
@@ -87,3 +87,5 @@ General clean-ups, changes and things I wish to implement for this project:
    subproject to the 'assembleAll' Gradle task.
 * [ ] Incorporate Gradle's [test fixtures](https://docs.gradle.org/current/userguide/java_testing.html#sec:java_test_fixtures)
    feature in one of the subprojects
+* [ ] Consider exploring Gradle's programmatic API for running Gradle. I don't know if I'll ever have a use-case for this
+  but I won't know until I learn it.

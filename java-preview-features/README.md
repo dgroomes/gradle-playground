@@ -48,5 +48,7 @@ Follow these instructions to build and run the demo program.
 
 General clean-ups, TODOs and things I wish to implement for this project:
 
+* [ ] When Gradle officially supports running on Java 20, upgrade to Java 20 for "use this Java version" because this
+  subproject is not designed to showcase the "toolchains for Java" feature of Gradle.
 * [x] DONE (I could still use the planet types very effectively thanks to "pattern matching for switch") Upgrade to Java 20 and use a Java 20 preview feature. This will require throwing away the planet design for something
   else.
