@@ -74,4 +74,4 @@ General clean-ups, TODOs and things I wish to implement for this project:
   set up a Gradle project to work on an early access version of Java?". I think `java-early-access` is a better way to
   position this project than `java-toolchain` because it describes a concrete use-case for differing between the Java
   version used for running Gradle vs the Java version used for compiling and running the program.
-* [ ] Use a TOML Gradle version catalog
+* [x] DONE Use a TOML Gradle version catalog
