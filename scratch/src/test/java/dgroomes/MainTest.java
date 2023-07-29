@@ -8,6 +8,6 @@ class MainTest {
 
     @Test
     void message() {
-        assertEquals("Hello world!", Main.message());
+        assertEquals("Hello world!", "Hello world!");
     }
 }

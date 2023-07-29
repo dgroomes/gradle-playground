@@ -87,5 +87,10 @@ General clean-ups, changes and things I wish to implement for this project:
    subproject to the 'assembleAll' Gradle task.
 * [ ] Incorporate Gradle's [test fixtures](https://docs.gradle.org/current/userguide/java_testing.html#sec:java_test_fixtures)
    feature in one of the subprojects
-* [ ] Consider exploring Gradle's programmatic API for running Gradle. I don't know if I'll ever have a use-case for this
+* [x] DONE (I implemented something in `scratch`. I couldn't figure out the architecture though. I think it creates a new classloader and loads the jars from the download Gradle distros) Consider exploring [Gradle's Tooling API](https://docs.gradle.org/current/userguide/third_party_integration.html#embedding) for programmatic access to Gradle. I don't know if I'll ever have a use-case for this,
   but I won't know until I learn it.
+  * This note caught my eye. How does this work?
+  * > A fundamental characteristic of the Tooling API is that it operates in a version independent way. This means that
+    > you can use the same API to work with builds that use different versions of Gradle, including versions that are
+    > newer or older than the version of the Tooling API that you are using. The Tooling API is Gradle wrapper aware
+    > and, by default, uses the same Gradle version as that used by the wrapper-powered build.

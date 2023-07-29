@@ -4,11 +4,13 @@ plugins {
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://repo.gradle.org/gradle/libs-releases") }
 }
 
 dependencies {
     implementation(libs.slf4j.api)
     runtimeOnly(libs.slf4j.simple)
+    implementation(libs.gradle.tooling.api)
 
     testImplementation(libs.junit.jupiter.api)
     testRuntimeOnly(libs.junit.jupiter.engine)

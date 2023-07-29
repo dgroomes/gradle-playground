@@ -1,11 +1,13 @@
 [versions]
-# SLF4J releases: http://www.slf4j.org/news.html
-slf4j = "2.0.7"
+slf4j = "2.0.7" # SLF4J releases: http://www.slf4j.org/news.html
 
 junit = "5.10.0" # JUnit releases: https://junit.org/junit5/docs/current/release-notes/index.html
+
+gradle = "8.2.1" # Gradle releases: https://gradle.org/releases
 
 [libraries]
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 junit-jupiter-api = { module =  "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
 junit-jupiter-engine = { module =  "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+gradle-tooling-api = { module =  "org.gradle:gradle-tooling-api", version.ref = "gradle" }
