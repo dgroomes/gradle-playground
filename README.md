@@ -71,9 +71,9 @@ See the README in [java-modules/](java-modules/).
 
 General clean-ups, changes and things I wish to implement for this project:
 
-* [ ] Revive `java-toolchain` and upgrade it to Java 20 (because Java 18 I can't download easily so I'm going to just
+* [x] DONE Revive `java-toolchain` and upgrade it to Java 20 (because Java 18 I can't download easily so I'm going to just
   unload this subproject from the `settings.gradle.kts` file for now)
-* [ ] IN PROGRESS Updates for 2023.
+* [x] DONE Updates for 2023.
 * [x] DONE Implement a `java-preview-features-kotlin-dsl` subproject. (Pretty much copy <https://github.com/dgroomes/wiremock-playground/blob/db2684af8617995106e7793ea1348e1d6516bc70/build.gradle.kts>)   
 * [x] DONE `java-preview-features` to `java-preview-features-groovy-dsl` and `java-preview-features-kotlin-dsl` to `java-preview-features`
    because the Kotlin DSL is now fully usable and featureful in my experience. This was not quite true a year ago but it
