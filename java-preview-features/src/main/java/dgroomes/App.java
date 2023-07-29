@@ -11,14 +11,14 @@ public class App {
         // Describe some random celestial objects.
         for (int i = 0; i < 5; i++) {
             var randomCelestialObject = app.randomCelestialObject();
-            String msg;
-            if (randomCelestialObject instanceof Planet planet) {
-                msg = "It's %s, an instance of Planet. Its atmosphere is: %s".formatted(planet.getClass().getSimpleName(), planet.atmosphere());
-            } else if (randomCelestialObject instanceof Star star) {
-                msg = "It's an instance of Star. The start description is: %s".formatted(star.brightness());
-            } else {
-                throw new IllegalStateException("Did not find a match. When JEP 406 is 'Pattern Matching for switch' this branch can be removed. See https://openjdk.java.net/jeps/406");
-            }
+            String msg = switch (randomCelestialObject) {
+                case Planet planet -> {
+                    var name = planet.getClass().getSimpleName();
+                    var atmosphere = planet.atmosphere();
+                    yield "It's %s, an instance of Planet. Its atmosphere is: %s".formatted(name, atmosphere);
+                }
+                case Star star -> "It's an instance of Star. It says: %s".formatted(star.brightMessage());
+            };
             System.out.println(msg);
         }
     }
