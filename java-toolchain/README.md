@@ -1,6 +1,6 @@
 # java-toolchain
 
-This sub-project illustrates how to leverage Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html)
+This subproject illustrates how to leverage Gradle's [Toolchains for JVM projects](https://docs.gradle.org/current/userguide/toolchains.html)
 to use an early-access version of Java in a Gradle project.
 
 ## What?

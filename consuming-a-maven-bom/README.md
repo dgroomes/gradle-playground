@@ -1,6 +1,6 @@
 # consuming-a-maven-bom
 
-This sub-project shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
+This subproject shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
 
 
 # Description
