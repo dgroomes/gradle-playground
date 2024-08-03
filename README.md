@@ -32,7 +32,7 @@ The subprojects include:
 
 ### `java-preview-features/`
 
-This subproject shows how to configure Gradle to build and run a project that uses Java [_Preview Features_](https://openjdk.java.net/jeps/12).
+Configure Gradle to build and run a project that uses Java [_Preview Features_](https://openjdk.java.net/jeps/12).
 
 See the README in [java-preview-features/](java-preview-features/).
 

@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.java_preview_features;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +10,6 @@ class AppTest {
     void message() {
         var app = new App();
 
-        assertNotNull(app.randomCelestialObject());
+        assertNotNull(app.countTimezones());
     }
 }
