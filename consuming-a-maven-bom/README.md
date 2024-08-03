@@ -1,9 +1,9 @@
 # consuming-a-maven-bom
 
-This subproject shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
+Consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
 
 
-# Description
+## Overview
 
 In particular, this project imports the [Jackson project](https://github.com/FasterXML/jackson) BOM dependency: <https://github.com/FasterXML/jackson-bom>.
 This allows Jackson dependencies defined in the BOM to be declared in the Gradle project *without* a version because
@@ -14,11 +14,11 @@ We can make sense of the final dependency tree if we look at the `gradle.lockfil
 Gradle's [dependency locking](https://docs.gradle.org/current/userguide/dependency_locking.html) feature.
 
 
-# Instructions
+## Instructions
 
 Follow these instructions to resolve and inspect the dependencies.
 
-1. Use Java 17
+1. Pre-requisite: Java 21
 2. Read the `build.gradle.kts` file
    * This file has code comments that describe the core concepts. Read the file in detail.
 3. Trigger dependency resolution and lock the dependencies
@@ -28,9 +28,9 @@ Follow these instructions to resolve and inspect the dependencies.
    * Note: Using the `dependencies` task is arbitrary. Any task that resolves dependencies will work.
    * Running a dependency-resolving task with `--write-locks` only has an effect on this project when there is a newer
      version of the Jackson BOM available than there was when this task was last run. The project declares a dynamic
-     version dependency on the Jackson BOM. For example, if the project declares `2.15.+` then if `2.15.2` is the latest
-     version of the Jackson BOM but the project was last built when `2.15.1` was the latest version, then this task will
-     update the `gradle.lockfile` to use `2.15.2`.
+     version dependency on the Jackson BOM. For example, if the project declares `2.17.+` then if `2.17.2` is the latest
+     version of the Jackson BOM but the project was last built when `2.17.1` was the latest version, then this task will
+     update the `gradle.lockfile` to use `2.17.2`.
 4. Make some dependency observations
    * Study the `gradle.lock` file. This is a convenient way to get a holistic view of the resolved dependencies in the
      project. Alternatively, use any of the following commands to inspect the resolved dependencies in the project.

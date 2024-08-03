@@ -29,11 +29,13 @@ re-using the code.
 
 The subprojects include:
 
+
 ### `java-preview-features/`
 
 This subproject shows how to configure Gradle to build and run a project that uses Java [_Preview Features_](https://openjdk.java.net/jeps/12).
 
 See the README in [java-preview-features/](java-preview-features/).
+
 
 ### `java-early-access-via-toolchain/`
 
@@ -42,11 +44,13 @@ to use an early-access version of Java in a Gradle project.
 
 See the README in [java-early-access-via-toolchain/](java-early-access-via-toolchain/).
 
+
 ### `consuming-a-maven-bom/`
 
-This subproject shows how to consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
+Consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency.
 
 See the README in [consuming-a-maven-bom/](consuming-a-maven-bom/).
+
 
 ### `multi-module/`
 
@@ -54,11 +58,13 @@ This subproject illustrates a multi-module Gradle project.
 
 See the README in [multi-module/](multi-module/).
 
+
 ### `plugin/`
 
 This subproject shows how to write and apply a custom Gradle plugin. It also showcases [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
 
 See the README in [plugin/](plugin/).
+
 
 ### `java-modules/`
 

@@ -6,8 +6,14 @@ repositories {
     mavenCentral()
 }
 
-val jacksonBomVersion = "2.15.+" // Jackson releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases
-val jacksonDatabindVersion = "2.15.1" // let's try to force a downgrade to a specific version of jackson-databind which is different from what is defined in the BOM
+// Jackson releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases
+// Usually, we don't like to code to a dynamic version ("+" sign), but because we are using a lock file, we still have
+// a complete understading of the resolved dependencies. The lock file is version controlled and should be reviewed
+// before committing changes.
+val jacksonBomVersion = "2.17.+"
+
+// Let's try to force a downgrade to a specific version of jackson-databind which is different from what is defined in the BOM
+val jacksonDatabindVersion = "2.17.1"
 
 dependencies {
     /*
@@ -53,29 +59,35 @@ dependencies {
      ------------------------------------------------------------
 
      compileClasspath - Compile classpath for source set 'main'.
-     +--- com.fasterxml.jackson:jackson-bom:2.15.2
-     |    +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2 (c)
-     |    +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (c)
-     |    +--- com.fasterxml.jackson.core:jackson-databind:2.15.2 -> 2.15.1 (c)
-     |    +--- com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.15.2 (c)
-     |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.15.2 (c)
-     +--- com.fasterxml.jackson.core:jackson-annotations -> 2.15.2
-     |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
-     +--- com.fasterxml.jackson.core:jackson-core -> 2.15.2
-     |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
-     +--- com.fasterxml.jackson.module:jackson-module-parameter-names -> 2.15.2
-     |    +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (*)
-     |    +--- com.fasterxml.jackson.core:jackson-databind:2.15.2 -> 2.15.1
-     |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.15.1 -> 2.15.2 (*)
-     |    |    +--- com.fasterxml.jackson.core:jackson-core:2.15.1 -> 2.15.2 (*)
-     |    |    \--- com.fasterxml.jackson:jackson-bom:2.15.1 -> 2.15.2 (*)
-     |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
-     +--- com.fasterxml.jackson.dataformat:jackson-dataformat-csv -> 2.15.2
-     |    +--- com.fasterxml.jackson.core:jackson-databind:2.15.2 -> 2.15.1 (*)
-     |    +--- com.fasterxml.jackson.core:jackson-annotations:2.15.2 (*)
-     |    +--- com.fasterxml.jackson.core:jackson-core:2.15.2 (*)
-     |    \--- com.fasterxml.jackson:jackson-bom:2.15.2 (*)
-     \--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.15.1} -> 2.15.1 (*)
+     +--- com.fasterxml.jackson:jackson-bom:2.17.+ -> 2.17.2
+     |    +--- com.fasterxml.jackson.core:jackson-annotations:2.17.2 (c)
+     |    +--- com.fasterxml.jackson.core:jackson-core:2.17.2 (c)
+     |    +--- com.fasterxml.jackson.core:jackson-databind:2.17.2 -> 2.17.1 (c)
+     |    +--- com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.17.2 (c)
+     |    \--- com.fasterxml.jackson.module:jackson-module-parameter-names:2.17.2 (c)
+     +--- com.fasterxml.jackson.core:jackson-annotations -> 2.17.2
+     |    \--- com.fasterxml.jackson:jackson-bom:2.17.2 (*)
+     +--- com.fasterxml.jackson.core:jackson-core -> 2.17.2
+     |    \--- com.fasterxml.jackson:jackson-bom:2.17.2 (*)
+     +--- com.fasterxml.jackson.module:jackson-module-parameter-names -> 2.17.2
+     |    +--- com.fasterxml.jackson.core:jackson-core:2.17.2 (*)
+     |    +--- com.fasterxml.jackson.core:jackson-databind:2.17.2 -> 2.17.1
+     |    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.17.1 -> 2.17.2 (*)
+     |    |    +--- com.fasterxml.jackson.core:jackson-core:2.17.1 -> 2.17.2 (*)
+     |    |    \--- com.fasterxml.jackson:jackson-bom:2.17.1 -> 2.17.2 (*)
+     |    \--- com.fasterxml.jackson:jackson-bom:2.17.2 (*)
+     +--- com.fasterxml.jackson.dataformat:jackson-dataformat-csv -> 2.17.2
+     |    +--- com.fasterxml.jackson.core:jackson-databind:2.17.2 -> 2.17.1 (*)
+     |    +--- com.fasterxml.jackson.core:jackson-annotations:2.17.2 (*)
+     |    +--- com.fasterxml.jackson.core:jackson-core:2.17.2 (*)
+     |    \--- com.fasterxml.jackson:jackson-bom:2.17.2 (*)
+     +--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.17.1} -> 2.17.1 (*)
+     +--- com.fasterxml.jackson.core:jackson-databind:{strictly 2.17.1} -> 2.17.1 (c)
+     +--- com.fasterxml.jackson.dataformat:jackson-dataformat-csv:{strictly 2.17.2} -> 2.17.2 (c)
+     +--- com.fasterxml.jackson.core:jackson-core:{strictly 2.17.2} -> 2.17.2 (c)
+     +--- com.fasterxml.jackson.module:jackson-module-parameter-names:{strictly 2.17.2} -> 2.17.2 (c)
+     +--- com.fasterxml.jackson:jackson-bom:{strictly 2.17.2} -> 2.17.2 (c)
+     \--- com.fasterxml.jackson.core:jackson-annotations:{strictly 2.17.2} -> 2.17.2 (c)
 
      (c) - A dependency constraint, not a dependency. The dependency affected by the constraint occurs elsewhere in the tree.
      (*) - Indicates repeated occurrences of a transitive dependency subtree. Gradle expands transitive dependency subtrees only once per project; repeat occurrences only display the root of the subtree, followed by this annotation.
