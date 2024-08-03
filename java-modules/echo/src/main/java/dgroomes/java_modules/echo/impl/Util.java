@@ -1,4 +1,4 @@
-package dgroomes.echo.impl;
+package dgroomes.java_modules.echo.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Note: this class is an implementation detail of the "echo" module and should not be exported. It should be invisible
- * to modules that import the "dgroomes.echo" module. This is a benefit of the Java Module System!
+ * to modules that import the "dgroomes.java_modules.echo" module. This is a benefit of the Java Module System!
  */
 public class Util {
 

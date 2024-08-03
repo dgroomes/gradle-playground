@@ -1,6 +1,6 @@
-package dgroomes.runner;
+package dgroomes.java_modules.runner;
 
-import dgroomes.echo.Echo;
+import dgroomes.java_modules.echo.Echo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

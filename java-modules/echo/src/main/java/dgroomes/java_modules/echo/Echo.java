@@ -1,7 +1,7 @@
-package dgroomes.echo;
+package dgroomes.java_modules.echo;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import dgroomes.echo.impl.Util;
+import dgroomes.java_modules.echo.impl.Util;
 
 public class Echo {
 

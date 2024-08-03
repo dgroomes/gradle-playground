@@ -10,6 +10,6 @@ dependencies {
 }
 
 application {
-    mainModule.set("dgroomes.runner")
-    mainClass.set("dgroomes.runner.Main")
+    mainModule.set("dgroomes.java_modules.runner")
+    mainClass.set("dgroomes.java_modules.runner.Main")
 }

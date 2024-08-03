@@ -21,7 +21,7 @@ I've found this to be helpful while learning about JPMS.
 
 Follow these instructions to build and run the demo program:
 
-1. Use Java 17
+1. Pre-requisite: Java 21
 2. Build and run the program:
    * ```shell
      ./gradlew run
@@ -29,10 +29,10 @@ Follow these instructions to build and run the demo program:
    * It should print something that looks like the following.
    * ```text
      > Task :runner:run
-     [main] INFO dgroomes.runner.Main - You say: hello!
-     [main] INFO dgroomes.runner.Main - You heard: hello!, hello!, hello! ...
-     [main] INFO dgroomes.runner.Main - You say: { "message": "hello from JSON!" }
-     [main] INFO dgroomes.runner.Main - You heard: hello from JSON!, hello from JSON!, hello from JSON! ...
+     [main] INFO dgroomes.java_modules.runner.Main - You say: hello!
+     [main] INFO dgroomes.java_modules.runner.Main - You heard: hello!, hello!, hello! ...
+     [main] INFO dgroomes.java_modules.runner.Main - You say: { "message": "hello from JSON!" }
+     [main] INFO dgroomes.java_modules.runner.Main - You heard: hello from JSON!, hello from JSON!, hello from JSON! ...
      ```
 
 

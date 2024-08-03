@@ -1,4 +1,4 @@
-module dgroomes.runner {
+module dgroomes.java_modules.runner {
     requires org.slf4j;
-    requires dgroomes.echo;
+    requires dgroomes.java_modules.echo;
 }
