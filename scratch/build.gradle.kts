@@ -40,6 +40,6 @@ tasks {
         from(configurations.testRuntimeClasspath)
         from(project.tasks.named("jar"))
         from(project.tasks.named("testJar"))
-        into("${buildDir}/install/lib")
+        into("${layout.buildDirectory.asFile.get()}/install/lib")
     }
 }
