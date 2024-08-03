@@ -1,6 +1,6 @@
 # plugin
 
-This subproject shows how to write and apply a custom Gradle plugin. It also showcases [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
+Write and apply a custom Gradle plugin. This project also showcases [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
 
 
 ## Overview 
@@ -10,7 +10,7 @@ dependency of the project.
 
 The task prints the content to a file and separates each path by the colon character (':') so that the file's contents can
 be used conveniently as the classpath argument to the `java` command. The availability of this classpath file is a kind
-of "escape hatch" from Gradle so that we can use hand-written `java` commands to execute our program. Effectively, we are
+of "escape hatch" from Gradle so that we can use handwritten `java` commands to execute our program. Effectively, we are
 relying on Gradle as a *build tool* but not as a *run tool* (so to speak). Why would we ever want that? Here are some
 examples where we want to execute a program's source code but not in a traditional `./gradlew run`-way:
 * [Running a program and its libraries in JShell (the Java REPL)](https://github.com/dgroomes/jshell-playground/tree/main/with-gradle)
@@ -21,7 +21,7 @@ examples where we want to execute a program's source code but not in a tradition
 
 Follow these instructions to build the plugin and use it in the Gradle project.
 
-1. Use Java 17
+1. Pre-requisite: Java 21
 2. Compile the program's source code:
     * ```shell
       ./gradlew compileJava

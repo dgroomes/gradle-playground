@@ -61,7 +61,7 @@ See the README in [multi-module/](multi-module/).
 
 ### `plugin/`
 
-This subproject shows how to write and apply a custom Gradle plugin. It also showcases [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
+Write and apply a custom Gradle plugin. This project also showcases [Gradle's `buildSrc` feature](https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources).
 
 See the README in [plugin/](plugin/).
 

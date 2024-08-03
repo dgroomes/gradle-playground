@@ -42,7 +42,7 @@ public class ListDependenciesTask extends DefaultTask {
      */
     @OutputFile
     public File getDependenciesListFile() {
-        return new File(getProject().getBuildDir(), DEPENDENCIES_OUTPUT_FILE_NAME);
+        return new File(getProject().getLayout().getBuildDirectory().getAsFile().get(), DEPENDENCIES_OUTPUT_FILE_NAME);
     }
 
     /**
