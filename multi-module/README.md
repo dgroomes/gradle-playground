@@ -1,6 +1,6 @@
 # multi-module
 
-This subproject illustrates a multi-module Gradle project.
+A **poorly configured** multi-module Gradle project.
 
 
 ## Overview
@@ -8,13 +8,18 @@ This subproject illustrates a multi-module Gradle project.
 This project is me learning how to configure multi-module Gradle projects. Read more about Gradle's support for
 multi-project builds at the [official doc site](https://docs.gradle.org/current/userguide/kotlin_dsl.html#sec:multi_project_builds).
 
+This project is a poor configuration of a multi-module Gradle project because it uses "cross-configuring" from the root
+`build.gradle.kts` file. This is not recommend. See the extensive note in that file. Instead, you should use a
+combination of pre-compiled script plugins and keeping subproject-specific configuration in the subproject instead of
+trying to "control it from afar" in the root `build.gradle.kts`.
+
 
 ## Instructions
 
 The interesting part of this project is the Gradle configuration. So, read the `build.gradle.kts` files. But still, it's
 useful to execute the example applications to prove that it works. Follow the below steps to build and run the programs:
 
-1. Use Java 17
+1. Pre-requisite: Java 21
 2. Run `module-a`:
    * ```shell
      ./gradlew :module-a:run
@@ -22,7 +27,7 @@ useful to execute the example applications to prove that it works. Follow the be
    * It should print something like the following.
    * ```text
      > Task :module-a:run
-     [main] INFO dgroomes.MainA - Hello world from 'module-a'!
+     [main] INFO dgroomes.multi_module.module_a.MainA - Hello world from 'module-a'!
      ```
 3. Run `module-b`:
    * ```shell
@@ -31,7 +36,7 @@ useful to execute the example applications to prove that it works. Follow the be
    * It should print something like the following.
    * ```text
      > Task :module-b:run
-     [main] INFO dgroomes.MainB - Hello world from 'module-b'!
+     [main] INFO dgroomes.multi_module.module_b.MainB - Hello world from 'module-b'!
      ```
 
 

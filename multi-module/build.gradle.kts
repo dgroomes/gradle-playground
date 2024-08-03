@@ -41,7 +41,7 @@ subprojects {
  */
 val moduleA = project(":module-a") {
     configure<JavaApplication> {
-        mainClass.set("dgroomes.MainA")
+        mainClass.set("dgroomes.multi_module.module_a.MainA")
     }
 }
 

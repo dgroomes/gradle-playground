@@ -54,7 +54,7 @@ See the README in [consuming-a-maven-bom/](consuming-a-maven-bom/).
 
 ### `multi-module/`
 
-This subproject illustrates a multi-module Gradle project.
+A **poorly configured** multi-module Gradle project.
 
 See the README in [multi-module/](multi-module/).
 

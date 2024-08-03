@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.multi_module.module_b;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
