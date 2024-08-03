@@ -14,7 +14,7 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion.set(JavaLanguageVersion.of(23))
     }
 }
 
@@ -25,5 +25,5 @@ tasks {
 }
 
 application {
-    mainClass.set("dgroomes.App")
+    mainClass.set("dgroomes.java_early_access_via_toolchain.App")
 }

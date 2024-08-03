@@ -1,6 +1,5 @@
 [versions]
-# JUnit releases: https://junit.org/junit5/docs/current/release-notes/index.html
-junit = "5.10.0"
+junit = "5.10.3" # JUnit releases: https://junit.org/junit5/docs/current/release-notes/index.html
 
 [libraries]
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }

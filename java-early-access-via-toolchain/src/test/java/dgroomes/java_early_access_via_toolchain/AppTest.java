@@ -1,4 +1,4 @@
-package dgroomes;
+package dgroomes.java_early_access_via_toolchain;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +9,6 @@ class AppTest {
     @Test
     void runMain() {
         var message = App.sayHello();
-        assertEquals("Hello World! I am running in Java 21-ea", message);
+        assertEquals("Hello World! I am running in Java 23-ea", message);
     }
 }
