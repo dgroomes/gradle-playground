@@ -17,10 +17,10 @@ Follow these instructions to build and run the demo program.
 
 1. Pre-requisite: Java 21
 2. Build and run the program:
-   * ```shell
+   - ```shell
      ./gradlew run
      ```
-   * It should output the following.
+   - It should output the following.
      ```text
      > Task :compileJava
      Note: /Users/dave/repos/personal/gradle-playground/java-preview-features/src/main/java/dgroomes/java_preview_features/App.java uses preview features of Java SE 21.
@@ -36,7 +36,7 @@ Follow these instructions to build and run the demo program.
      There is no way to suppress this because Java's preview features are designed to allow breaking changes in future
      releases, so the compile-time reminder is a welcome one.   
 3. Run the tests:
-   * ```shell
+   - ```shell
      ./gradlew test
      ```
 
@@ -45,5 +45,5 @@ Follow these instructions to build and run the demo program.
 
 General clean-ups, TODOs and things I wish to implement for this project:
 
-* [x] DONE (I could still use the planet types very effectively thanks to "pattern matching for switch") Upgrade to Java 20 and use a Java 20 preview feature. This will require throwing away the planet design for something
+- [x] DONE (I could still use the planet types very effectively thanks to "pattern matching for switch") Upgrade to Java 20 and use a Java 20 preview feature. This will require throwing away the planet design for something
   else.

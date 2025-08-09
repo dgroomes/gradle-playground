@@ -4,7 +4,7 @@ import java.util.TimeZone;
 
 public class App {
 
-    public static void main(String[] args) {
+    static void main() {
         var count = new App().countTimezones();
         System.out.printf("Found %d time zones%n", count);
     }

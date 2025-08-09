@@ -2,7 +2,7 @@ package dgroomes.java_preview_features;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class AppTest {
 
@@ -10,6 +10,6 @@ class AppTest {
     void message() {
         var app = new App();
 
-        assertNotNull(app.countTimezones());
+        assertTrue(app.countTimezones() > 0);
     }
 }
