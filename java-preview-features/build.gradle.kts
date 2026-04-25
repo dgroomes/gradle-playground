@@ -7,7 +7,7 @@ repositories {
     mavenCentral()
 }
 
-val junitVersion = "5.13.4" // releases: https://junit.org/junit5/docs/current/release-notes/index.html
+val junitVersion = "6.0.3" // releases: https://junit.org/junit5/docs/current/release-notes/index.html
 
 dependencies {
     testImplementation(platform("org.junit:junit-bom:$junitVersion"))
