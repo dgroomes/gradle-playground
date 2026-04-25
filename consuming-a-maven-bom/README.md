@@ -18,7 +18,7 @@ Gradle's [dependency locking](https://docs.gradle.org/current/userguide/dependen
 
 Follow these instructions to resolve and inspect the dependencies.
 
-1. Pre-requisite: Java 21
+1. Pre-requisite: Java 25
 2. Read the `build.gradle.kts` file
    - This file has code comments that describe the core concepts. Read the file in detail.
 3. Trigger dependency resolution and lock the dependencies
@@ -28,9 +28,9 @@ Follow these instructions to resolve and inspect the dependencies.
    - Note: Using the `dependencies` task is arbitrary. Any task that resolves dependencies will work.
    - Running a dependency-resolving task with `--write-locks` only has an effect on this project when there is a newer
      version of the Jackson BOM available than there was when this task was last run. The project declares a dynamic
-     version dependency on the Jackson BOM. For example, if the project declares `2.19.+` then if `2.19.2` is the latest
-     version of the Jackson BOM but the project was last built when `2.19.1` was the latest version, then this task will
-     update the `gradle.lockfile` to use `2.19.2`.
+     version dependency on the Jackson BOM. For example, if the project declares `3.1.+` then if `3.1.2` is the latest
+     version of the Jackson BOM but the project was last built when `3.1.1` was the latest version, then this task will
+     update the `gradle.lockfile` to use `3.1.2`.
 4. Make some dependency observations
    - Study the `gradle.lock` file. This is a convenient way to get a holistic view of the resolved dependencies in the
      project. Alternatively, use any of the following commands to inspect the resolved dependencies in the project.

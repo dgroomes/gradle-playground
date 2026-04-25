@@ -2,20 +2,19 @@
 
 📚 Learning and exploring the Gradle Build Tool.
 
-> From mobile apps to microservices, from small startups to big enterprises, Gradle helps teams build, automate and
-> deliver better software, faster.
+> Gradle is the open source build system of choice for Java, Android, and Kotlin developers. From mobile apps to microservices, from small startups to big enterprises, it helps teams deliver better software, faster.
 > -- <cite>https://gradle.org</cite>
 
 
 ## Why is this useful?
 
 Gradle can be complex to configure correctly because it is a powerful DSL with a rich set of features and plugins. It's
-hard to remember the exact incantations to write in a `build.gradle` (or `build.gradle.kts` for that matter) to
+hard to remember the exact incantations to write in a `build.gradle.kts` to
 configure, for example, the enablement of Java language preview features or JUnit test logging.
 
 While all the information you need to configure a Gradle project is technically available in the highly thorough and
 accurate [official Gradle documentation](https://docs.gradle.org/current/userguide/userguide.html) and embedded in
-[executable sample projects within the Gradle source code repository](https://github.com/gradle/gradle/tree/master/subprojects/docs/src/samples),
+[executable sample projects within the Gradle source code repository](https://github.com/gradle/gradle/tree/master/platforms/documentation/docs/src/snippets),
 this repository contains my own personal examples that I need to refer back to continuously in my day-to-day development.
 In other words, this repository whittles down the full scale of Gradle to a few files for my own quick reference.
 
