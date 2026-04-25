@@ -7,14 +7,16 @@ repositories {
     mavenCentral()
 }
 
+val junitVersion = "6.0.3" // JUnit releases: https://junit.org/junit5/docs/current/release-notes/index.html
+
 dependencies {
-    testImplementation(libs.junit.jupiter.api)
-    testRuntimeOnly(libs.junit.jupiter.engine)
+    testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
+    testImplementation("org.junit.platform:junit-platform-launcher")
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(23))
+        languageVersion.set(JavaLanguageVersion.of(27))
     }
 }
 
