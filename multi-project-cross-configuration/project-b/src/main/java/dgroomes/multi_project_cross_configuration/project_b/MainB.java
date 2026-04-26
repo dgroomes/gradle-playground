@@ -1,4 +1,4 @@
-package dgroomes.multi_module.module_b;
+package dgroomes.multi_project_cross_configuration.project_b;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,7 +7,7 @@ public class MainB {
 
     private static final Logger log = LoggerFactory.getLogger(MainB.class);
 
-    public static void main(String[] args) {
-        log.info("Hello world from 'module-b'!");
+    void main() {
+        log.info("Hello world from 'project-b'!");
     }
 }

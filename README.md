@@ -51,11 +51,11 @@ Consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency
 See the README in [consuming-a-maven-bom/](consuming-a-maven-bom/).
 
 
-### `multi-module/`
+### `multi-project-cross-configuration/`
 
-A **poorly configured** multi-module Gradle project.
+A multi-project Gradle build configured with cross-project configuration using the `allprojects` and `subprojects` DSL constructs.
 
-See the README in [multi-module/](multi-module/).
+See the README in [multi-project-cross-configuration/](multi-project-cross-configuration/).
 
 
 ### `plugin/`

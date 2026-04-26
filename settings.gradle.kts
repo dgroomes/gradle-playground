@@ -22,14 +22,11 @@ rootProject.name = "gradle-playground"
 // Gradle "included builds". See https://docs.gradle.org/current/userguide/composite_builds.html. Now, when someone
 // clones this repo and opens it in Intellij, all the subprojects are automatically identified by Intellij and indexed.
 // You get code completion and project navigation out-of-the-box. Pretty slick!
-includeBuild("java-preview-features")
 
-// I need to exclude this for now because it's a moving target and I don't have or want to get JDK 23 on my machine right now.
-//includeBuild("java-early-access-via-toolchain")
-
-includeBuild("java-modules")
 includeBuild("consuming-a-maven-bom")
-includeBuild("multi-module")
+includeBuild("java-early-access-via-toolchain")
+includeBuild("java-modules")
+includeBuild("java-preview-features")
+includeBuild("multi-project-cross-configuration")
 includeBuild("plugin")
 includeBuild("scratch")
-includeBuild("java-early-access-via-toolchain")
