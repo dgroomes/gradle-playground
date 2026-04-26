@@ -12,7 +12,7 @@ public class DependenciesListerPlugin implements Plugin<Project> {
     @Override
     public void apply(Project project) {
         project.getTasks().register("listDependencies", ListDependenciesTask.class, task -> {
-            // I update this plugin to be compatible with the Gradle config cache, and in so doing had to push work into
+            // I updated this plugin to be compatible with the Gradle config cache, and in so doing had to push work into
             // this 'configurationAction' closure. That goes against my original design goal of having the task
             // encapsulate its own config/code. I'm curious if there is a more idiomatic way to do this... I'm sure
             // there is, but I can't figure it out right now.

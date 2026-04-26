@@ -21,7 +21,7 @@ examples where we want to execute a program's source code but not in a tradition
 
 Follow these instructions to build the plugin and use it in the Gradle project.
 
-1. Pre-requisite: Java 21
+1. Pre-requisite: Java 25
 2. Compile the program's source code:
     - ```shell
       ./gradlew compileJava

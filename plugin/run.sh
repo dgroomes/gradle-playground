@@ -4,7 +4,7 @@
 #
 # This script depends on two things:
 #   1) The program must first be compiled with `./gradlew compileJava`
-#   2) The runtime dependencies must be printed out with `./gradlew listDependencies`
+#   2) The runtime dependencies must be written out with `./gradlew listDependencies`
 
 set -eu
 
