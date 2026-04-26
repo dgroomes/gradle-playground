@@ -21,7 +21,7 @@ I've found this to be helpful while learning about JPMS.
 
 Follow these instructions to build and run the demo program:
 
-1. Pre-requisite: Java 21
+1. Pre-requisite: Java 25
 2. Build and run the program:
    - ```shell
      ./gradlew run

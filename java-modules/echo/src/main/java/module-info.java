@@ -1,5 +1,5 @@
 module dgroomes.java_modules.echo {
-    requires com.fasterxml.jackson.databind;
+    requires tools.jackson.databind;
 
     // Export only the exact "dgroomes.java_modules.echo" package. Notice how we don't export the package "dgroomes.java_modules.echo.impl".
     // This means other code that imports the "dgroomes.java_modules.echo" module will only see the "dgroomes.java_modules.echo.Echo"

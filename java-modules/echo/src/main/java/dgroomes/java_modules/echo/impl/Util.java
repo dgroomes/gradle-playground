@@ -1,8 +1,8 @@
 package dgroomes.java_modules.echo.impl;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 /**
  * Note: this class is an implementation detail of the "echo" module and should not be exported. It should be invisible
@@ -19,7 +19,7 @@ public class Util {
         JsonNode node;
         try {
             node = objectMapper.readTree(json);
-        } catch (JsonProcessingException e) {
+        } catch (JacksonException e) {
             throw new IllegalArgumentException(String.format("The given string was not valid JSON! %s", json));
         }
         return node;

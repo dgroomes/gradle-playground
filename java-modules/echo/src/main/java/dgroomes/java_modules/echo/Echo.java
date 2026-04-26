@@ -1,6 +1,6 @@
 package dgroomes.java_modules.echo;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 import dgroomes.java_modules.echo.impl.Util;
 
 public class Echo {
@@ -28,7 +28,7 @@ public class Echo {
             throw new IllegalArgumentException(String.format("The given JSON does not contain a 'message' field! %s", json));
         }
 
-        var msg = msgNode.textValue();
+        var msg = msgNode.stringValue();
         return echo(msg);
     }
 }
