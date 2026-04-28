@@ -1,0 +1,12 @@
+[versions]
+kotlin = "2.3.21"   # Kotlin releases:  https://kotlinlang.org/docs/releases.html
+junit = "6.0.3"     # JUnit releases:   https://junit.org/junit5/docs/current/release-notes/index.html
+jackson = "3.1.2"   # Jackson releases: https://github.com/FasterXML/jackson/wiki/Jackson-Releases
+
+[libraries]
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "kotlin" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+# Versionless. Aligned by `junit-bom`.
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+jackson-databind = { module = "tools.jackson.core:jackson-databind", version.ref = "jackson" }
