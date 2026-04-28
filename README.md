@@ -51,6 +51,13 @@ Consume a Maven BOM in a Gradle project and *strictly* override a BOM dependency
 See the README in [consuming-a-maven-bom/](consuming-a-maven-bom/).
 
 
+### `pre-compiled-script-plugin/`
+
+Using a *pre-compiled script plugin* to apply common conventions to Gradle subprojects.
+
+See the README in [pre-compiled-script-plugin/](pre-compiled-script-plugin/).
+
+
 ### `multi-project-cross-configuration/`
 
 A multi-project Gradle build configured with cross-project configuration using the `allprojects` and `subprojects` DSL constructs.
@@ -99,3 +106,5 @@ General clean-ups, changes and things I wish to implement for this project:
     > you can use the same API to work with builds that use different versions of Gradle, including versions that are
     > newer or older than the version of the Tooling API that you are using. The Tooling API is Gradle wrapper aware
     > and, by default, uses the same Gradle version as that used by the wrapper-powered build.
+* [ ] IN PROGRESS `pre-compiled-script-plugin` subproject
+  * I use pre-compiled script plugins somewhat often. They are a natural thing to reach for in a multi-module Gradle project. I find myself wanting them as soon as I have to repeat the junit/testing config stanza more than twice. That said, they aren't perfect, especially because of some restrictions that make the ergonomics worse, when paired with version catalogs. See [Gradle GH issue #15383: *Make generated type-safe version catalogs accessors accessible from precompiled script plugins*](https://github.com/gradle/gradle/issues/15383#issuecomment-779893192). That leads you to using a work-around that escalates the complexity to a point where I have a hard time recommending the pattern for a typical team of software engineers. I have gone back and forth on this so many times. I need to at least lock in an example, complete with generous links and explanation and a characterization of the trade-offs.
