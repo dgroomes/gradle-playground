@@ -1,5 +1,5 @@
 plugins {
-    // We apply the pre-compiled script plugin. And in so doing, there's no need to apply the Kotlin plugin
+    // We apply the pre-compiled script plugin. And in so doing, there's no need to apply the Kotlin plugin.
     id("my.kotlin-conventions")
     application
 }
